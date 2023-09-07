@@ -1,0 +1,243 @@
+import { memo } from "react";
+import { useHead } from "./index.hooks";
+import pages from "@/pages";
+import {
+  AppBar,
+  Container,
+  Toolbar,
+  Typography,
+  Stack,
+  Button,
+  Divider,
+  Paper,
+  Skeleton,
+  SwipeableDrawer,
+  Box,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
+import { CustomDivider } from "../CustomDivider";
+import MenuIcon from "@mui/icons-material/Menu";
+import CallIcon from "@mui/icons-material/Call";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+type HeadProps = {};
+const drawerBleeding = 56;
+export const Head = memo(({}: HeadProps) => {
+  const {
+    theme,
+    isBelowMd,
+    open,
+    toggleDrawer,
+    handleMenuClick,
+    handleDrawerClose,
+    drawerOpen,
+  } = useHead();
+
+  return (
+    <AppBar
+      position="static"
+      sx={{
+        boxShadow: "0px 8px 16px rgba(7, 4, 4, 0.5)",
+        justifyContent: "center",
+        backgroundColor: "rgb(0, 128, 128)",
+        height: isBelowMd ? "80px" : "150px",
+      }}
+    >
+      <Stack
+        direction={"row"}
+        spacing={2}
+        sx={{ display: "flex", paddingX: "20px" }}
+      >
+        <Stack sx={{ justifyContent: "center" }}>
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: "flex",
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: "6px",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            SINA YEKTAY
+          </Typography>
+        </Stack>
+        {isBelowMd ? (
+          <Stack style={{ marginLeft: "auto" }}>
+            <IconButton onClick={handleMenuClick}>
+              <MenuIcon style={{ color: "white" }} />
+            </IconButton>
+            <Drawer
+              anchor="right"
+              open={drawerOpen}
+              onClose={handleDrawerClose}
+            >
+              <List sx={{width:"189px"}}>
+                <ListItem  sx={{cursor:"pointer"}}  onClick={handleDrawerClose}>
+                  <ListItemText primary="Skills" />
+                </ListItem>
+                <Divider style={{height:"3px"}} />
+                <ListItem  sx={{cursor:"pointer"}} >
+                  <ListItemText primary="Interests" />
+                </ListItem>
+                <Divider style={{height:"3px"}} />
+                <ListItem  sx={{cursor:"pointer"}} >
+                  <ListItemText primary="Experience" />
+                </ListItem>
+                <Divider style={{height:"3px"}} />
+                <ListItem sx={{cursor:"pointer"}} onClick={() => toggleDrawer(true)} >
+                  <ListItemText primary="Contact" />
+                </ListItem>
+              </List>
+            </Drawer>
+          </Stack>
+        ) : (
+          <>
+            <CustomDivider />
+            <Stack sx={{}}>
+              <Button
+                style={{
+                  fontSize: "20px",
+                  textTransform: "none",
+                  border: "outlined",
+                  color: "white",
+                }}
+              >
+                About
+              </Button>
+            </Stack>
+            <CustomDivider />
+            <Stack sx={{}}>
+              <Button
+                onClick={() => toggleDrawer(true)}
+                style={{
+                  fontSize: "20px",
+                  textTransform: "none",
+                  border: "outlined",
+                  color: "white",
+                }}
+              >
+                Contact
+              </Button>
+            </Stack>
+            <CustomDivider />
+            <Stack sx={{}}>
+              <Button
+                style={{
+                  fontSize: "20px",
+                  textTransform: "none",
+                  border: "outlined",
+                  color: "white",
+                }}
+              >
+                Skills
+              </Button>
+            </Stack>
+            <CustomDivider />
+            <Stack sx={{}}>
+              <Button
+                style={{
+                  fontSize: "20px",
+                  textTransform: "none",
+                  border: "outlined",
+                  color: "white",
+                }}
+              >
+                Interests
+              </Button>
+            </Stack>
+            <CustomDivider />
+            <Stack sx={{}}>
+              <Button
+                style={{
+                  fontSize: "20px",
+                  textTransform: "none",
+                  border: "outlined",
+                  color: "white",
+                }}
+              >
+                Experience
+              </Button>
+            </Stack>
+          </>
+        )}
+      </Stack>
+
+      <SwipeableDrawer
+        anchor="bottom"
+        open={open}
+        onClose={() => toggleDrawer(false)}
+        onOpen={() => toggleDrawer(true)}
+        swipeAreaWidth={drawerBleeding}
+        disableSwipeToOpen={false}
+        ModalProps={{
+          keepMounted: true,
+        }}
+      >
+        <Box
+          sx={{
+            px: 2,
+            pb: 2,
+            height: "100%",
+            overflow: "auto",
+          }}
+        >
+          <Stack
+            direction={isBelowMd ? "column" : "row"}
+            sx={{ justifyContent: "space-around", padding: isBelowMd ? 2 : 7 }}
+          >
+            <Stack direction="row">
+              <Stack sx={{ justifyContent: "center" }}>
+                <MailOutlineIcon
+                  style={{ fontSize: isBelowMd ? "25px" : "34px", color: "rgb(0, 128, 128)" }}
+                />
+              </Stack>
+              <Stack>
+                <Typography
+                  sx={{
+                    p: 2,
+                    fontWeight: "bold",
+                    fontSize: isBelowMd ? "20px" : "24px",
+                    color: "rgb(0, 128, 128)",
+                  }}
+                >
+                  sina.yektay1990@gmail.com
+                </Typography>
+              </Stack>
+            </Stack>
+            <Stack direction="row">
+              <Stack sx={{ justifyContent: "center" }}>
+                <CallIcon
+                  style={{ fontSize: isBelowMd ? "25px" : "34px", color: "rgb(0, 128, 128)" }}
+                />
+              </Stack>
+              <Stack>
+                <Typography
+                  sx={{
+                    p: 2,
+                    fontWeight: "bold",
+                    fontSize: isBelowMd ? "20px" : "24px",
+                    color: "rgb(0, 128, 128)",
+                  }}
+                >
+                  +39 3891299102
+                </Typography>
+              </Stack>
+            </Stack>
+          </Stack>
+          <Skeleton variant="rectangular" height="100%" />
+        </Box>
+      </SwipeableDrawer>
+    </AppBar>
+  );
+});
+
+Head.displayName = "Head";
