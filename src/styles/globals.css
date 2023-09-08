@@ -4,6 +4,17 @@
   margin: 0;
 }
 
+.homeTitle{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.homeBody{
+  font-size: 17px;
+  font-family: sans-serif;
+}
+
 /* html,
 body {
   max-width: 100vw;

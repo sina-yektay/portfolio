@@ -1,11 +1,12 @@
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export const useHead = () => {
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const theme = useTheme();
   const isBelowMd = useMediaQuery(theme.breakpoints.down("md"));
   const toggleDrawer = useCallback((state: boolean) => {
@@ -22,6 +23,22 @@ export const useHead = () => {
     setDrawerOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return {
     theme,
     isBelowMd,
@@ -30,5 +47,6 @@ export const useHead = () => {
     handleMenuClick,
     handleDrawerClose,
     drawerOpen,
+    isScrolled,
   };
 };
