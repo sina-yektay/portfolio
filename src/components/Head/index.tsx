@@ -90,6 +90,13 @@ export const Head = memo(({}: HeadProps) => {
               onClose={handleDrawerClose}
             >
               <List sx={{ width: "189px" }}>
+              <ListItem
+                  sx={{ cursor: "pointer" }}
+                  onClick={handleDrawerClose}
+                >
+                  <ListItemText primary="Projects" />
+                </ListItem>
+                <Divider style={{ height: "3px" }} />
                 <ListItem
                   sx={{ cursor: "pointer" }}
                   onClick={handleDrawerClose}
@@ -126,7 +133,7 @@ export const Head = memo(({}: HeadProps) => {
                   color: "white",
                 }}
               >
-                About
+                Projects
               </Button>
             </Stack>
             <CustomDivider />
