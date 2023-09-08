@@ -34,16 +34,25 @@ export const Head = memo(({}: HeadProps) => {
     handleMenuClick,
     handleDrawerClose,
     drawerOpen,
+    isScrolled,
   } = useHead();
 
   return (
     <AppBar
-      position="static"
+      position="sticky"
       sx={{
         boxShadow: "0px 8px 16px rgba(7, 4, 4, 0.5)",
         justifyContent: "center",
         backgroundColor: "rgb(0, 128, 128)",
-        height: isBelowMd ? "80px" : "150px",
+        height:
+          isScrolled && !isBelowMd
+            ? "120px"
+            : isBelowMd && isScrolled
+            ? "60px"
+            : isBelowMd
+            ? "80px"
+            : "150px",
+        transition: "height 0.3s ease-in-out",
       }}
     >
       <Stack
@@ -80,20 +89,26 @@ export const Head = memo(({}: HeadProps) => {
               open={drawerOpen}
               onClose={handleDrawerClose}
             >
-              <List sx={{width:"189px"}}>
-                <ListItem  sx={{cursor:"pointer"}}  onClick={handleDrawerClose}>
+              <List sx={{ width: "189px" }}>
+                <ListItem
+                  sx={{ cursor: "pointer" }}
+                  onClick={handleDrawerClose}
+                >
                   <ListItemText primary="Skills" />
                 </ListItem>
-                <Divider style={{height:"3px"}} />
-                <ListItem  sx={{cursor:"pointer"}} >
+                <Divider style={{ height: "3px" }} />
+                <ListItem sx={{ cursor: "pointer" }}>
                   <ListItemText primary="Interests" />
                 </ListItem>
-                <Divider style={{height:"3px"}} />
-                <ListItem  sx={{cursor:"pointer"}} >
+                <Divider style={{ height: "3px" }} />
+                <ListItem sx={{ cursor: "pointer" }}>
                   <ListItemText primary="Experience" />
                 </ListItem>
-                <Divider style={{height:"3px"}} />
-                <ListItem sx={{cursor:"pointer"}} onClick={() => toggleDrawer(true)} >
+                <Divider style={{ height: "3px" }} />
+                <ListItem
+                  sx={{ cursor: "pointer" }}
+                  onClick={() => toggleDrawer(true)}
+                >
                   <ListItemText primary="Contact" />
                 </ListItem>
               </List>
@@ -197,7 +212,10 @@ export const Head = memo(({}: HeadProps) => {
             <Stack direction="row">
               <Stack sx={{ justifyContent: "center" }}>
                 <MailOutlineIcon
-                  style={{ fontSize: isBelowMd ? "25px" : "34px", color: "rgb(0, 128, 128)" }}
+                  style={{
+                    fontSize: isBelowMd ? "25px" : "34px",
+                    color: "rgb(0, 128, 128)",
+                  }}
                 />
               </Stack>
               <Stack>
@@ -216,7 +234,10 @@ export const Head = memo(({}: HeadProps) => {
             <Stack direction="row">
               <Stack sx={{ justifyContent: "center" }}>
                 <CallIcon
-                  style={{ fontSize: isBelowMd ? "25px" : "34px", color: "rgb(0, 128, 128)" }}
+                  style={{
+                    fontSize: isBelowMd ? "25px" : "34px",
+                    color: "rgb(0, 128, 128)",
+                  }}
                 />
               </Stack>
               <Stack>
