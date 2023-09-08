@@ -21,6 +21,10 @@ const text1 =
   "Hi there! i'm sina a frontend developer with two years of experience in building web applications. My journey in web development started in late 2020 when i joined a company in turin(italy) as an intern frontend developer, and this has led me to become proficient in frontend technologies including Typescript, React.js, Redux, MUI, HTML and CSS.";
 const text2 =
   "In addition to my frontend expertise, I've also gained intermediate knowledge in Node.js, enabling me to tackle fullstack development challenges. This versatility allows me to seamlessly transition between frontend and fullstack roles, depending on the project's requirements.";
+const text3 = "My dedication to responsive web design ensures that every project I create looks and works flawlessly on all devices, providing an exceptional user experience."
+const text4 = "As you explore this portfolio, you'll discover a collection of my projects, each highlighting different facets of my skills and expertise. The 'Skills' tab provides in-depth information about my technical abilities, including my proficiency in crafting Single Page Applications for a seamless user experience and my knowledge of version control with Git and GitHub."
+const text5 = "I'm continually expanding my knowledge base, currently delving into AWS cloud services to leverage the power of cloud computing in web development. I'm excited about the possibilities it brings to the table."
+const text6 = "Thank you for visiting my portfolio! Feel free to reach out if you have any questions or if you'd like to collaborate on a project."
 
 export default function Home() {
   const theme = useTheme();
@@ -65,62 +69,199 @@ export default function Home() {
           </Stack>
           <Stack>
             <List>
-              <ListItem>
+              <ListItem
+                sx={{
+                  marginBottom: 1,
+                  borderLeft: isBelowMd ? "4px solid rgb(0, 128, 128)" : "none",
+                }}
+              >
                 <CheckIcon
-                  style={{ color: "rgb(0, 128, 128)", fontSize: "30px" }}
+                  style={{
+                    color: "rgb(0, 128, 128)",
+                    fontSize: "30px",
+                    display: isBelowMd ? "none" : "block",
+                  }}
                 />
-                <ListItemText primary={<><strong>Languages:</strong> JavaScript, TypeScript, Java</>} />
+                <ListItemText
+                  primary={
+                    <>
+                      <strong>Languages:</strong> JavaScript, TypeScript, Java
+                    </>
+                  }
+                />
               </ListItem>
 
-              <ListItem>
+              <ListItem
+                sx={{
+                  marginBottom: 1,
+                  borderLeft: isBelowMd ? "4px solid rgb(0, 128, 128)" : "none",
+                }}
+              >
                 <CheckIcon
-                  style={{ color: "rgb(0, 128, 128)", fontSize: "30px" }}
+                  style={{
+                    color: "rgb(0, 128, 128)",
+                    fontSize: "30px",
+                    display: isBelowMd ? "none" : "block",
+                  }}
                 />
-                <ListItemText primary={<><strong>Frameworks:</strong> Next.js</>} />
+                <ListItemText
+                  primary={
+                    <>
+                      <strong>Frameworks:</strong> Next.js
+                    </>
+                  }
+                />
               </ListItem>
 
-              <ListItem>
+              <ListItem
+                sx={{
+                  marginBottom: 1,
+                  borderLeft: isBelowMd ? "4px solid rgb(0, 128, 128)" : "none",
+                }}
+              >
                 <CheckIcon
-                  style={{ color: "rgb(0, 128, 128)", fontSize: "30px" }}
+                  style={{
+                    color: "rgb(0, 128, 128)",
+                    fontSize: "30px",
+                    display: isBelowMd ? "none" : "block",
+                  }}
                 />
-                <ListItemText primary={<><strong>Database:</strong> MongoDB, Sql</>} />
+                <ListItemText
+                  primary={
+                    <>
+                      <strong>Database:</strong> MongoDB, Sql
+                    </>
+                  }
+                />
               </ListItem>
 
-              <ListItem>
+              <ListItem
+                sx={{
+                  marginBottom: 1,
+                  borderLeft: isBelowMd ? "4px solid rgb(0, 128, 128)" : "none",
+                }}
+              >
                 <CheckIcon
-                  style={{ color: "rgb(0, 128, 128)", fontSize: "30px" }}
+                  style={{
+                    color: "rgb(0, 128, 128)",
+                    fontSize: "30px",
+                    display: isBelowMd ? "none" : "block",
+                  }}
                 />
-                <ListItemText primary={<><strong>Backend:</strong> Knowledge in creating backend APIs</>} />
+                <ListItemText
+                  primary={
+                    <>
+                      <strong>Backend:</strong> Knowledge in creating backend
+                      APIs, Node.js
+                    </>
+                  }
+                />
               </ListItem>
 
-              <ListItem>
+              <ListItem
+                sx={{
+                  marginBottom: 1,
+                  borderLeft: isBelowMd ? "4px solid rgb(0, 128, 128)" : "none",
+                }}
+              >
                 <CheckIcon
-                  style={{ color: "rgb(0, 128, 128)", fontSize: "30px" }}
+                  style={{
+                    color: "rgb(0, 128, 128)",
+                    fontSize: "30px",
+                    display: isBelowMd ? "none" : "block",
+                  }}
                 />
-                <ListItemText primary={<><strong>Single Page Applications (SPA):</strong> Crafting seamless and interactive user experiences</>} />
+                <ListItemText
+                  primary={
+                    <>
+                      <strong>Single Page Applications (SPA):</strong> Crafting
+                      seamless and interactive user experiences
+                    </>
+                  }
+                />
               </ListItem>
 
-              <ListItem>
+              <ListItem
+                sx={{
+                  marginBottom: 1,
+                  borderLeft: isBelowMd ? "4px solid rgb(0, 128, 128)" : "none",
+                }}
+              >
                 <CheckIcon
-                  style={{ color: "rgb(0, 128, 128)", fontSize: "30px" }}
+                  style={{
+                    color: "rgb(0, 128, 128)",
+                    fontSize: "30px",
+                    display: isBelowMd ? "none" : "block",
+                  }}
                 />
-                <ListItemText primary={<><strong>Server-Side Rendering (SSR):</strong> Enhancing SEO and user experience</>} />
+                <ListItemText
+                  primary={
+                    <>
+                      <strong>Server-Side Rendering (SSR):</strong> Enhancing
+                      SEO and user experience
+                    </>
+                  }
+                />
               </ListItem>
 
-              <ListItem>
+              <ListItem
+                sx={{
+                  marginBottom: 1,
+                  borderLeft: isBelowMd ? "4px solid rgb(0, 128, 128)" : "none",
+                }}
+              >
                 <CheckIcon
-                  style={{ color: "rgb(0, 128, 128)", fontSize: "30px" }}
+                  style={{
+                    color: "rgb(0, 128, 128)",
+                    fontSize: "30px",
+                    display: isBelowMd ? "none" : "block",
+                  }}
                 />
-                <ListItemText primary={<><strong>AWS Expertise:</strong> AWS EC2, S3 Bucket, and more</>} />
+                <ListItemText
+                  primary={
+                    <>
+                      <strong>AWS Expertise:</strong> AWS EC2, S3 Bucket, SSM, and
+                      more
+                    </>
+                  }
+                />
               </ListItem>
 
-              <ListItem>
+              <ListItem
+                sx={{
+                  marginBottom: 1,
+                  borderLeft: isBelowMd ? "4px solid rgb(0, 128, 128)" : "none",
+                }}
+              >
                 <CheckIcon
-                  style={{ color: "rgb(0, 128, 128)", fontSize: "30px" }}
+                  style={{
+                    color: "rgb(0, 128, 128)",
+                    fontSize: "30px",
+                    display: isBelowMd ? "none" : "block",
+                  }}
                 />
-                <ListItemText primary={<><strong>Version Control:</strong> Proficient in Git and GitHub</>} />
+                <ListItemText
+                  primary={
+                    <>
+                      <strong>Version Control:</strong> Proficient in Git and
+                      GitHub
+                    </>
+                  }
+                />
               </ListItem>
             </List>
+          </Stack>
+          <Stack sx={{paddingTop:2}}>
+            <Typography className="homeBody">{text3}</Typography>
+          </Stack>
+          <Stack sx={{paddingTop:2}}>
+            <Typography className="homeBody">{text4}</Typography>
+          </Stack>
+          <Stack sx={{paddingTop:2}}>
+            <Typography className="homeBody">{text5}</Typography>
+          </Stack>
+          <Stack sx={{paddingTop:2}}>
+            <Typography className="homeBody">{text6}</Typography>
           </Stack>
         </Stack>
       </PageWrapper>
