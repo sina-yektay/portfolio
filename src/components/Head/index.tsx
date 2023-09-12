@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { useHead } from "./index.hooks";
 import pages from "@/pages";
+import { NextRouter, useRouter } from "next/router";
 import {
   AppBar,
   Container,
@@ -36,11 +37,13 @@ export const Head = memo(({}: HeadProps) => {
     drawerOpen,
     isScrolled,
   } = useHead();
+  const router: NextRouter = useRouter();
 
   return (
     <AppBar
       position="sticky"
       sx={{
+        top: 0,
         boxShadow: "0px 8px 16px rgba(7, 4, 4, 0.5)",
         justifyContent: "center",
         backgroundColor: "rgb(0, 128, 128)",
@@ -90,9 +93,9 @@ export const Head = memo(({}: HeadProps) => {
               onClose={handleDrawerClose}
             >
               <List sx={{ width: "189px" }}>
-              <ListItem
+                <ListItem
                   sx={{ cursor: "pointer" }}
-                  onClick={handleDrawerClose}
+                  onClick={() => router.push("/projects")}
                 >
                   <ListItemText primary="Projects" />
                 </ListItem>
@@ -126,6 +129,7 @@ export const Head = memo(({}: HeadProps) => {
             <CustomDivider />
             <Stack sx={{}}>
               <Button
+                onClick={() => router.push("/projects")}
                 style={{
                   fontSize: "20px",
                   textTransform: "none",
