@@ -38,7 +38,7 @@ const Projects = memo(({}: ProjectsProps) => {
                   backgroundColor: "rgb(0, 100, 100)",
                 },
               }}
-              onClick={() => router.push("/")}
+              onClick={() => router.push("/projects/personal-projects")}
             >
               <CardContent
                 sx={{

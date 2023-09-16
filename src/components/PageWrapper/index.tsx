@@ -14,7 +14,7 @@ export const PageWrapper: FC<PropsWithChildren<PageWrapperProps>> = memo(
       <Box sx={{}}>
         <Head />
         <Stack direction="column" sx={{ height: "100%" }}>
-          <Stack sx={{ padding: 5 }}>
+          <Stack sx={{ padding: 5}}>
             {!home && (
               <Breadcrumbs separator="›" aria-label="breadcrumb">
                 <Link color="inherit" href="/">
