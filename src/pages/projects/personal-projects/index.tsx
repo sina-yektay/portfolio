@@ -5,14 +5,12 @@ import { useRouter } from "next/router";
 import { memo } from "react";
 
 const projectsArray = [
-  { name: "novacoop", to: "/projects/projects-done-in-team/novacoop" },
-  { name: "excelsiorienta", to: "/projects/projects-done-in-team/excelsiorienta" },
+  { name: "torinasia", to: "/projects/personal-projects/torinasia" },
 ];
-
-const TeamProject = memo(() => {
+type PersonalProjectProps = {};
+const PersonalProject = memo(({}: PersonalProjectProps) => {
   const theme = useTheme();
   const isBelowMd = useMediaQuery(theme.breakpoints.down("md"));
-  const router = useRouter();
   return (
     <PageWrapper>
       <Grid
@@ -36,5 +34,5 @@ const TeamProject = memo(() => {
   );
 });
 
-TeamProject.displayName = "TeamProject";
-export default TeamProject;
+PersonalProject.displayName = "PersonalProject";
+export default PersonalProject;

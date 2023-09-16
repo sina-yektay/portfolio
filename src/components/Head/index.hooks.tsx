@@ -7,6 +7,7 @@ export const useHead = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled700, setIsScrolled700] = useState(false);
   const theme = useTheme();
   const isBelowMd = useMediaQuery(theme.breakpoints.down("md"));
   const toggleDrawer = useCallback((state: boolean) => {
@@ -25,10 +26,14 @@ export const useHead = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 2600) {
+        setIsScrolled700(true);
+      } else if (window.scrollY > 200) {
         setIsScrolled(true);
+        setIsScrolled700(false);
       } else {
         setIsScrolled(false);
+        setIsScrolled700(false);
       }
     };
 
@@ -48,5 +53,6 @@ export const useHead = () => {
     handleDrawerClose,
     drawerOpen,
     isScrolled,
+    isScrolled700,
   };
 };
