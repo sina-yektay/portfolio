@@ -439,7 +439,7 @@ const Novacoop = memo(({}: NovacoopProps) => {
                         justifyContent: "center",
                       }}
                     >
-                      <Grid xs={12} sx={{ paddingBottom: 0 }}>
+                      <Grid item xs={12} sx={{ paddingBottom: 0 }}>
                         <Typography
                           sx={{ color: "white" }}
                           className="homeBody2"
@@ -511,6 +511,25 @@ const Novacoop = memo(({}: NovacoopProps) => {
             <ListItemText
               primary={
                 <>
+                  <strong>Frontend:</strong> React, Next.js
+                </>
+              }
+            />
+          </ListItem>
+          <ListItem
+            sx={{
+              marginBottom: 1,
+            }}
+          >
+            <CheckIcon
+              style={{
+                color: "rgb(0, 128, 128)",
+                fontSize: "30px",
+              }}
+            />
+            <ListItemText
+              primary={
+                <>
                   <strong>Backend:</strong> Node.js
                 </>
               }
@@ -530,26 +549,8 @@ const Novacoop = memo(({}: NovacoopProps) => {
             <ListItemText
               primary={
                 <>
-                  <strong>Framework:</strong> Next.js
-                </>
-              }
-            />
-          </ListItem>
-          <ListItem
-            sx={{
-              marginBottom: 1,
-            }}
-          >
-            <CheckIcon
-              style={{
-                color: "rgb(0, 128, 128)",
-                fontSize: "30px",
-              }}
-            />
-            <ListItemText
-              primary={
-                <>
-                  <strong>Libraries:</strong> React, axios, react-router-dom...
+                  <strong>Libraries:</strong> axios ,react-draggable-list
+                  ,react-hook-form , react-router-dom...
                 </>
               }
             />
@@ -626,25 +627,6 @@ const Novacoop = memo(({}: NovacoopProps) => {
               primary={
                 <>
                   <strong>Package Manager:</strong> npm
-                </>
-              }
-            />
-          </ListItem>
-          <ListItem
-            sx={{
-              marginBottom: 1,
-            }}
-          >
-            <CheckIcon
-              style={{
-                color: "rgb(0, 128, 128)",
-                fontSize: "30px",
-              }}
-            />
-            <ListItemText
-              primary={
-                <>
-                  <strong>Authentication:</strong> aws
                 </>
               }
             />

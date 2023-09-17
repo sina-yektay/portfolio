@@ -12,6 +12,17 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+import t1 from "../../../../../public/assets/t1.png";
+import t2 from "../../../../../public/assets/t2.png";
+import t3 from "../../../../../public/assets/t3.png";
+import t4 from "../../../../../public/assets/t4.png";
+import t5 from "../../../../../public/assets/t5.png";
+import t6 from "../../../../../public/assets/t6.png";
+import t7 from "../../../../../public/assets/t7.png";
+import t8 from "../../../../../public/assets/t8.png";
+import t9 from "../../../../../public/assets/t9.png";
+import t10 from "../../../../../public/assets/t10.png";
+import t11 from "../../../../../public/assets/t11.png";
 import Link from "next/link";
 import { memo } from "react";
 import { Carousel } from "react-responsive-carousel";
@@ -60,65 +71,90 @@ const text12 =
   "The primary target audience for TorinAsia is the Asian student community in Turin, Italy. By focusing on this niche market, the company aims to build a loyal customer base and become the go-to platform for Asian food products.";
 const text13 =
   "Since its inception in 2020, TorinAsia has experienced significant growth and customer engagement. The launch of the web platform has enabled the company to expand its reach and enhance its services. In the future, TorinAsia plans to further improve its platform, expand its product range, and explore additional markets to solidify its position as a leading online Asian food marketplace in Italy.";
-const text14 = "";
-const text15 = "";
-const text16 = "";
-const text17 = "";
+const text14 =
+  "TorinAsia is a dynamic online Asian food marketplace that caters to the diverse culinary preferences of the Asian student community in Turin, Italy. Established in 2020, this innovative startup has evolved from utilizing social media platforms for sales to launching a sophisticated web platform to provide customers with a seamless shopping experience. The project comprises two Single Page Applications (SPAs), one dedicated to the user side and the other to the admin side, ensuring efficient management and a user-friendly interface.";
+const text15 =
+  "The admin panel offers comprehensive product management capabilities, allowing administrators to add, edit, or remove products from the platform. This ensures that the product catalog remains up-to-date with the latest offerings.";
+const text16 =
+  "Admins can efficiently monitor incoming orders, providing real-time insights into customer purchases and order status. This feature enables seamless order processing and delivery coordination.";
+const text17 =
+  "The admin side provides access to valuable user insights, including shopping history and preferences. This data empowers administrators to tailor promotions and discounts for enhanced customer engagement.";
+const text18 =
+  "Users can easily search for their desired products using the intuitive search bar at the top of the application. This feature streamlines the shopping experience by quickly locating specific items.";
+const text19 =
+  "The project's user-centric approach is further emphasized with multi-language support, allowing users to seamlessly switch between Italian and English for enhanced accessibility.";
+const text20 =
+  "Users can create and manage their accounts, providing a personalized shopping experience. Account management includes editing user profiles and securely storing delivery information.";
+const text21 =
+  "The application incorporates a user-friendly shopping cart, allowing customers to add selected products for future purchase. Product selections are stored in the Redux store, ensuring a seamless shopping journey.";
+const text22 =
+  " In the event of a forgotten password, users can utilize the password recovery feature. By entering their email, users receive a password reset token via email, enhancing security and user convenience.";
+const text23 =
+  "The project is designed with responsiveness in mind, ensuring that all pages adapt seamlessly to various screen sizes and devices, providing a consistent user experience.";
+const text24 =
+  "Utilized modern web technologies, including React for the frontend development, and Redux for state management.";
+const text25 = "Employed Node.js for the server-side logic and data handling.";
+const text26 =
+  " Leveraged a database system (e.g., MongoDB or PostgreSQL) for storing product and user data.";
+const text27 =
+  "Integrated Nodemailer to facilitate email notifications and password reset functionality.";
+const text28 =
+  "Supported both Italian and English languages for a diverse user base.";
 const carouselContent = [
   {
-    im: "e1",
-    ex: "This is the home page of the Excelsiorienta, here the user chooses the student's path or the parent's path, then in next step this is used as a query tom fetch appropriate articles according to the user type.",
+    im: t1,
+    ex: "This is the home page, where the content dynamically changes and user can choose different groups of products that they are looking for.",
     side: "User side",
   },
   {
-    im: " e2",
-    ex: "Here you can see different news articles according to the user type(chosen in home page), but this is the local development and the news articles are not real, in the next slide you can see the same page with the appropriate articles on production.",
+    im: t2,
+    ex: "Products on discount shown to the user on the homepage as the user scroll down.",
     side: "User side",
   },
   {
-    im: "e3",
-    ex: "Here the articles are retrieved from db on the server side.",
+    im: t3,
+    ex: "All the pages are responsive across all devices.",
     side: "User side",
   },
   {
-    im: "e4",
-    ex: "This is the same page as the last slide but in mobile version, all pages are responsive in this platform.",
+    im: t4,
+    ex: "User can easily find the desired product after a few clicks.",
     side: "User side",
   },
   {
-    im: "e5",
-    ex: "This is the career page, where the students can choose a pathe to see it's details.",
+    im: t5,
+    ex: "Here is the all products page in which there is a pagination that user can visit different pages.",
     side: "User side",
   },
   {
-    im: "e6",
-    ex: "As instance this is the details page for Physicists and Astronomers.",
+    im: t6,
+    ex: "This is the user's cart, in which user can add, remove the peoducts and see the payment details.",
     side: "User side",
   },
   {
-    im: " e7",
-    ex: "Physicists and Astronomers job details and statistics.",
+    im: t7,
+    ex: "All product page in responsive mode.",
     side: "User side",
   },
   {
-    im: " e8",
-    ex: "Entry point of the Orienta Game(SPA).",
+    im: t8,
+    ex: "Here is where user can modify their account.",
     side: "User side",
   },
   {
-    im: "e9",
-    ex: "Here the user enter their details to proceed.",
-    side: "User side",
+    im: t9,
+    ex: "Entry point of the admin panel.",
+    side: "Admin side",
   },
   {
-    im: "e10",
-    ex: "User has to choose an avatar and the interested subjects.",
-    side: "User side",
+    im: t10,
+    ex: "The torinasia admins can add a new product like above.",
+    side: "Admin side",
   },
   {
-    im: "e11",
-    ex: "And finally here is the start of the game, the user has to finish three steps to receive a personalized suggestion for their career path.",
-    side: "User side",
+    im: t11,
+    ex: "This is where the admin can delete or edit a product, they also can search among products to find one.",
+    side: "Admin side",
   },
 ];
 type TorinasiaProps = {};
@@ -295,41 +331,19 @@ const Torinasia = memo(({}: TorinasiaProps) => {
         </Typography>
 
         <Typography sx={{ paddingTop: 5 }} className="homeBody2">
-          My Role:
+          Project Details: TorinAsia - Online Asian Food Marketplace
         </Typography>
         <Typography sx={{ marginTop: 1 }} className="homeBody">
-          {text9}
-        </Typography>
-
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
-          <strong>
-            1. Frontend Development with React, Redux, and Next.js:{" "}
-          </strong>
-          {text10}
-        </Typography>
-
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
-          <strong>2. Backend API Handling: </strong>
-          {text11}
+          {text14}
         </Typography>
 
         <Typography sx={{ paddingTop: 4 }} className="homeBody2">
-          Orienta Game: Enhancing User Experience
-        </Typography>
-
-        <Typography sx={{ marginTop: 2 }} className="homeBody">
-          {text12}
-        </Typography>
-        <Typography sx={{ marginTop: 3 }} className="homeBody2">
-          Game Overview:
-        </Typography>
-        <Typography sx={{ marginTop: 1 }} className="homeBody">
-          {text13}
+          Admin SPA Features:
         </Typography>
 
         <List>
           <ListItem
-            key="m1"
+            key="m-4"
             sx={{
               marginBottom: 0,
             }}
@@ -337,13 +351,13 @@ const Torinasia = memo(({}: TorinasiaProps) => {
             <ListItemText
               primary={
                 <>
-                  <strong>Valori (Values):</strong> {text14}
+                  <strong>Product Management:</strong> {text15}
                 </>
               }
             />
           </ListItem>
           <ListItem
-            key="m2"
+            key="m-3"
             sx={{
               marginBottom: 1,
             }}
@@ -351,13 +365,13 @@ const Torinasia = memo(({}: TorinasiaProps) => {
             <ListItemText
               primary={
                 <>
-                  <strong>Attitudini (Attitudes):</strong> {text15}
+                  <strong>Order Monitoring:</strong> {text16}
                 </>
               }
             />
           </ListItem>
           <ListItem
-            key="m2"
+            key="m-2"
             sx={{
               marginBottom: 1,
             }}
@@ -365,15 +379,127 @@ const Torinasia = memo(({}: TorinasiaProps) => {
             <ListItemText
               primary={
                 <>
-                  <strong>Competenze (Skills):</strong> {text16}
+                  <strong>User Analytics:</strong> {text17}
                 </>
               }
             />
           </ListItem>
         </List>
-        <Typography className="homeBody">
-          <strong>User Experience: </strong>
-          {text17}
+        <Typography sx={{ paddingTop: 4 }} className="homeBody2">
+          User SPA Features:
+        </Typography>
+
+        <List>
+          <ListItem
+            key="m-1"
+            sx={{
+              marginBottom: 0,
+            }}
+          >
+            <ListItemText
+              primary={
+                <>
+                  <strong>Product Search:</strong> {text18}
+                </>
+              }
+            />
+          </ListItem>
+          <ListItem
+            key="m0"
+            sx={{
+              marginBottom: 1,
+            }}
+          >
+            <ListItemText
+              primary={
+                <>
+                  <strong>Multi-Language Support:</strong> {text19}
+                </>
+              }
+            />
+          </ListItem>
+          <ListItem
+            key="m1"
+            sx={{
+              marginBottom: 1,
+            }}
+          >
+            <ListItemText
+              primary={
+                <>
+                  <strong>User Accounts:</strong> {text20}
+                </>
+              }
+            />
+          </ListItem>
+          <ListItem
+            key="m2"
+            sx={{
+              marginBottom: 1,
+            }}
+          >
+            <ListItemText
+              primary={
+                <>
+                  <strong>Shopping Cart: </strong> {text21}
+                </>
+              }
+            />
+          </ListItem>
+          <ListItem
+            key="m3"
+            sx={{
+              marginBottom: 1,
+            }}
+          >
+            <ListItemText
+              primary={
+                <>
+                  <strong>Password Recovery: </strong> {text22}
+                </>
+              }
+            />
+          </ListItem>
+          <ListItem
+            key="m4"
+            sx={{
+              marginBottom: 1,
+            }}
+          >
+            <ListItemText
+              primary={
+                <>
+                  <strong>Responsive Design: </strong> {text23}
+                </>
+              }
+            />
+          </ListItem>
+        </List>
+
+        <Typography sx={{ marginTop: 2 }} className="homeBody2">
+          Technology Stack:
+        </Typography>
+
+        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+          <strong>Frontend: </strong>
+          {text24}
+        </Typography>
+        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+          <strong>Backend: </strong>
+          {text25}
+        </Typography>
+
+        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+          <strong>Database: </strong>
+          {text26}
+        </Typography>
+        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+          <strong>Email Notifications: </strong>
+          {text27}
+        </Typography>
+        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+          <strong>Languages: </strong>
+          {text28}
         </Typography>
 
         <Stack id="Project Screenshots">
@@ -383,63 +509,71 @@ const Torinasia = memo(({}: TorinasiaProps) => {
           >
             Project Screenshots
           </Typography>
-
-          <style>{customCarouselStyles}</style>
-          <Carousel showArrows>
-            {carouselContent.map((slide, index) => {
-              return (
-                <Box
-                  key={index}
-                  sx={{ backgroundColor: "rgb(0, 128, 128)", height: "100%" }}
-                >
-                  <Grid container>
-                    <Grid
-                      container
-                      item
-                      xs={12}
-                      sx={{ paddingX: 3.5, paddingTop: 0.5, marginTop: 3 }}
-                    >
-                      {/* <Image
-                            src={slide.im}
-                            alt={"vc"}
-                            layout="responsive"
-                            style={{ objectFit: "contain", maxHeight: 600 }}
-                          /> */}
-                    </Grid>
-                    <Grid
-                      container
-                      item
-                      xs={12}
-                      sx={{
-                        marginX: 5,
-                        marginBottom: 0,
-                        justifyContent: "center",
-                      }}
-                    >
+          <Stack sx={{ marginTop: 3 }}>
+            <style>{customCarouselStyles}</style>
+            <Carousel showArrows>
+              {carouselContent.map((slide, index) => {
+                return (
+                  <Box
+                    key={index}
+                    sx={{ backgroundColor: "rgb(0, 128, 128)", height: "100%" }}
+                  >
+                    <Grid container>
                       <Grid
-                        xs={12}
                         container
                         item
+                        xs={12}
+                        sx={{ paddingX: 3.5, paddingTop: 0.5, marginTop: 3 }}
+                      >
+                        <Image
+                          src={slide.im}
+                          alt={"vc"}
+                          layout="responsive"
+                          style={{ objectFit: "contain", maxHeight: 600 }}
+                        />
+                      </Grid>
+                      <Grid
+                        container
+                        item
+                        xs={12}
                         sx={{
-                          marginTop: 2,
-                          minHeight: isBelowMd ? 240 : 100,
+                          marginX: 5,
+                          marginBottom: 0,
                           justifyContent: "center",
-                          alignItems: isBelowMd ? "center" : "flex-start",
-                          marginBottom: isBelowMd ? 3 : 1,
                         }}
                       >
-                        <Box>
-                          <Typography style={{ color: "white" }}>
-                            {slide.ex}
+                        <Grid item xs={12} sx={{ paddingBottom: 0 }}>
+                          <Typography
+                            sx={{ color: "white" }}
+                            className="homeBody2"
+                          >
+                            {slide.side}
                           </Typography>
-                        </Box>
+                        </Grid>
+                        <Grid
+                          xs={12}
+                          container
+                          item
+                          sx={{
+                            minHeight: isBelowMd ? 240 : 100,
+                            justifyContent: "center",
+                            alignItems: isBelowMd ? "center" : "flex-start",
+                            marginBottom: isBelowMd ? 3 : 1,
+                          }}
+                        >
+                          <Box>
+                            <Typography style={{ color: "white" }}>
+                              {slide.ex}
+                            </Typography>
+                          </Box>
+                        </Grid>
                       </Grid>
                     </Grid>
-                  </Grid>
-                </Box>
-              );
-            })}
-          </Carousel>
+                  </Box>
+                );
+              })}
+            </Carousel>
+          </Stack>
         </Stack>
 
         <Stack id="Technologies and Language" sx={{ paddingTop: 2 }}>
@@ -481,6 +615,25 @@ const Torinasia = memo(({}: TorinasiaProps) => {
             <ListItemText
               primary={
                 <>
+                  <strong>Frontend:</strong> React, Next.js
+                </>
+              }
+            />
+          </ListItem>
+          <ListItem
+            sx={{
+              marginBottom: 1,
+            }}
+          >
+            <CheckIcon
+              style={{
+                color: "rgb(0, 128, 128)",
+                fontSize: "30px",
+              }}
+            />
+            <ListItemText
+              primary={
+                <>
                   <strong>Backend:</strong> Node.js
                 </>
               }
@@ -500,26 +653,8 @@ const Torinasia = memo(({}: TorinasiaProps) => {
             <ListItemText
               primary={
                 <>
-                  <strong>Framework:</strong> Next.js
-                </>
-              }
-            />
-          </ListItem>
-          <ListItem
-            sx={{
-              marginBottom: 1,
-            }}
-          >
-            <CheckIcon
-              style={{
-                color: "rgb(0, 128, 128)",
-                fontSize: "30px",
-              }}
-            />
-            <ListItemText
-              primary={
-                <>
-                  <strong>Libraries:</strong> React, axios, react-router-dom...
+                  <strong>Libraries:</strong> axios ,react-responsive-carousel
+                  ,nodemailer , react-router-dom...
                 </>
               }
             />
@@ -624,7 +759,7 @@ const Torinasia = memo(({}: TorinasiaProps) => {
 
         <Stack id="Links" sx={{ paddingTop: 5, marginBottom: 1 }}>
           <Typography className="homeTitle">
-            here is the website link
+            here is the website link and github repo
           </Typography>
         </Stack>
 
@@ -632,10 +767,19 @@ const Torinasia = memo(({}: TorinasiaProps) => {
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            href="https://excelsiorienta.unioncamere.it"
+            href="https://torinasia.com"
           >
             <Typography style={{ fontSize: "25px" }}>
-              www.excelsiorienta.unioncamere.it
+              www.torinasia.com
+            </Typography>
+          </Link>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/sina-yektay/mercato-persiano"
+          >
+            <Typography style={{ fontSize: "23px" }}>
+              Visit the code on my github
             </Typography>
           </Link>
         </Stack>
