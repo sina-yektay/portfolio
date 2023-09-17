@@ -453,6 +453,25 @@ const Excelsiorienta = memo(({}: ExcelsiorientaProps) => {
             <ListItemText
               primary={
                 <>
+                  <strong>Frontend:</strong> React, Next.js
+                </>
+              }
+            />
+          </ListItem>
+          <ListItem
+            sx={{
+              marginBottom: 1,
+            }}
+          >
+            <CheckIcon
+              style={{
+                color: "rgb(0, 128, 128)",
+                fontSize: "30px",
+              }}
+            />
+            <ListItemText
+              primary={
+                <>
                   <strong>Backend:</strong> Node.js
                 </>
               }
@@ -472,26 +491,8 @@ const Excelsiorienta = memo(({}: ExcelsiorientaProps) => {
             <ListItemText
               primary={
                 <>
-                  <strong>Framework:</strong> Next.js
-                </>
-              }
-            />
-          </ListItem>
-          <ListItem
-            sx={{
-              marginBottom: 1,
-            }}
-          >
-            <CheckIcon
-              style={{
-                color: "rgb(0, 128, 128)",
-                fontSize: "30px",
-              }}
-            />
-            <ListItemText
-              primary={
-                <>
-                  <strong>Libraries:</strong> React, axios, react-router-dom...
+                  <strong>Libraries:</strong> axios ,react-dnd ,
+                  react-router-dom...
                 </>
               }
             />
