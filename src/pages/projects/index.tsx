@@ -24,7 +24,7 @@ const Projects = memo(({}: ProjectsProps) => {
           <Grid
             item
             container
-            sx={{ width: "80%", marginBottom: isBelowMd ? 3 : 0 }}
+            sx={{ width: "90%", marginBottom: isBelowMd ? 3 : 0 }}
           >
             <Card
               sx={{
@@ -65,7 +65,7 @@ const Projects = memo(({}: ProjectsProps) => {
           </Grid>
         </Grid>
         <Grid item container md={6} xs={12} sx={{ justifyContent: "center" }}>
-          <Grid item container sx={{ width: "80%" }}>
+          <Grid item container sx={{ width: "90%" }}>
             <Card
               sx={{
                 cursor: "pointer",

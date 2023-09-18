@@ -14,7 +14,7 @@ export const PageWrapper: FC<PropsWithChildren<PageWrapperProps>> = memo(
       <Box sx={{}}>
         <Head />
         <Stack direction="column" sx={{ height: "100%" }}>
-          <Stack sx={{ padding: 5}}>
+          <Stack sx={{ padding: 5 }}>
             {!home && (
               <Breadcrumbs separator="›" aria-label="breadcrumb">
                 <Link color="inherit" href="/">
@@ -24,15 +24,13 @@ export const PageWrapper: FC<PropsWithChildren<PageWrapperProps>> = memo(
                   route = parameter.replace(/-/g, " ");
                   var href = "";
                   if (index !== segments.length - 1) {
-
                     for (const eachRoute of segments) {
-                       
                       if (eachRoute === parameter) {
-                        href = href.concat("/")
+                        href = href.concat("/");
                         href = href.concat(parameter);
                         break;
                       } else {
-                        href = href.concat("/")
+                        href = href.concat("/");
                         href = href.concat(eachRoute);
                       }
                     }
@@ -44,6 +42,7 @@ export const PageWrapper: FC<PropsWithChildren<PageWrapperProps>> = memo(
                   }
                   return (
                     <Typography
+                      key={index}
                       style={{ fontWeight: "bold" }}
                       color="rgb(0, 128, 128)"
                     >

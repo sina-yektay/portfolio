@@ -18,70 +18,60 @@ import { useRouter } from "next/router";
 import { memo } from "react";
 import { Carousel } from "react-responsive-carousel";
 import CheckIcon from "@mui/icons-material/Check";
-import e1 from "../../../../../public/assets/e1.png";
-import e2 from "../../../../../public/assets/e2.png";
-import e3 from "../../../../../public/assets/e3.png";
-import e4 from "../../../../../public/assets/e4.png";
-import e5 from "../../../../../public/assets/e5.png";
-import e6 from "../../../../../public/assets/e6.png";
-import e7 from "../../../../../public/assets/e7.png";
-import e8 from "../../../../../public/assets/e8.png";
-import e9 from "../../../../../public/assets/e9.png";
-import e10 from "../../../../../public/assets/e10.png";
-import e11 from "../../../../../public/assets/e11.png";
+import { CustomCarousel } from "@/components/CustomCarousel";
 const carouselContent = [
   {
-    im: e1,
+    im: "/assets/e1.png",
     ex: "This is the home page of the Excelsiorienta, here the user chooses the student's path or the parent's path, then in next step this is used as a query tom fetch appropriate articles according to the user type.",
     side: "User side",
   },
   {
-    im: e2,
+    im: "/assets/e2.png",
     ex: "Here you can see different news articles according to the user type(chosen in home page), but this is the local development and the news articles are not real, in the next slide you can see the same page with the appropriate articles on production.",
     side: "User side",
   },
   {
-    im: e3,
+    im: "/assets/e3.png",
     ex: "Here the articles are retrieved from db on the server side.",
     side: "User side",
   },
   {
-    im: e4,
+    im: "/assets/e4.png",
     ex: "This is the same page as the last slide but in mobile version, all pages are responsive in this platform.",
     side: "User side",
   },
   {
-    im: e5,
+    im: "/assets/e5.png",
     ex: "This is the career page, where the students can choose a pathe to see it's details.",
     side: "User side",
   },
   {
-    im: e6,
+    im: "/assets/e6.png",
     ex: "As instance this is the details page for Physicists and Astronomers.",
     side: "User side",
   },
   {
-    im: e7,
+    im: "/assets/e7.png",
     ex: "Physicists and Astronomers job details and statistics.",
     side: "User side",
   },
   {
-    im: e8,
+    im: "/assets/e8.png",
     ex: "Entry point of the Orienta Game(SPA).",
     side: "User side",
   },
   {
-    im: e9,
+    im: "/assets/e9.png",
     ex: "Here the user enter their details to proceed.",
     side: "User side",
   },
   {
-    im: e10,
+    im: "/assets/e10.png",
     ex: "User has to choose an avatar and the interested subjects.",
     side: "User side",
   },
   {
-    im: e11,
+    im: "/assets/e11.png",
     ex: "And finally here is the start of the game, the user has to finish three steps to receive a personalized suggestion for their career path.",
     side: "User side",
   },
@@ -348,73 +338,22 @@ const Excelsiorienta = memo(({}: ExcelsiorientaProps) => {
           {text17}
         </Typography>
 
-        <Stack id="Project Screenshots">
-          <Typography
-            sx={{ marginTop: 5, marginBottom: 4.5 }}
-            className="homeTitle"
-          >
-            Project Screenshots
-          </Typography>
+        <Typography
+          id="Project Screenshots"
+          sx={{ marginTop: 5 }}
+          className="homeTitle"
+        >
+          Project Screenshots
+        </Typography>
 
-          <style>{customCarouselStyles}</style>
-          <Carousel showArrows>
-            {carouselContent.map((slide, index) => {
-              return (
-                <Box
-                  key={index}
-                  sx={{ backgroundColor: "rgb(0, 128, 128)", height: "100%" }}
-                >
-                  <Grid container>
-                    <Grid
-                      container
-                      item
-                      xs={12}
-                      sx={{ paddingX: 3.5, paddingTop: 0.5, marginTop: 3 }}
-                    >
-                      <Image
-                        src={slide.im}
-                        alt={"vc"}
-                        layout="responsive"
-                        style={{ objectFit: "contain", maxHeight: 600 }}
-                      />
-                    </Grid>
-                    <Grid
-                      container
-                      item
-                      xs={12}
-                      sx={{
-                        marginX: 5,
-                        marginBottom: 0,
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Grid
-                        xs={12}
-                        container
-                        item
-                        sx={{
-                          marginTop: 2,
-                          minHeight: isBelowMd ? 240 : 100,
-                          justifyContent: "center",
-                          alignItems: isBelowMd ? "center" : "flex-start",
-                          marginBottom: isBelowMd ? 3 : 1,
-                        }}
-                      >
-                        <Box>
-                          <Typography style={{ color: "white" }}>
-                            {slide.ex}
-                          </Typography>
-                        </Box>
-                      </Grid>
-                    </Grid>
-                  </Grid>
-                </Box>
-              );
-            })}
-          </Carousel>
+        <Stack sx={{ marginTop: 7, }}>
+          <CustomCarousel items={carouselContent} />
         </Stack>
 
-        <Stack id="Technologies and Language" sx={{ paddingTop: 2 }}>
+        <Stack
+          id="Technologies and Language"
+          sx={{ paddingTop: 2, marginTop: 5 }}
+        >
           <Typography className="homeTitle">
             Technologies and Language
           </Typography>
@@ -601,13 +540,13 @@ const Excelsiorienta = memo(({}: ExcelsiorientaProps) => {
           </Typography>
         </Stack>
 
-        <Stack sx={{ marginBottom: 5, marginLeft: 5 }}>
+        <Stack sx={{ marginBottom: 5, marginLeft: isBelowMd ? 2 : 5 }}>
           <Link
             target="_blank"
             rel="noopener noreferrer"
             href="https://excelsiorienta.unioncamere.it"
           >
-            <Typography style={{ fontSize: "25px" }}>
+            <Typography style={{ fontSize: isBelowMd ? "15px" : "25px" }}>
               www.excelsiorienta.unioncamere.it
             </Typography>
           </Link>

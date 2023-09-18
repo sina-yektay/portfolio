@@ -12,22 +12,13 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import t1 from "../../../../../public/assets/t1.png";
-import t2 from "../../../../../public/assets/t2.png";
-import t3 from "../../../../../public/assets/t3.png";
-import t4 from "../../../../../public/assets/t4.png";
-import t5 from "../../../../../public/assets/t5.png";
-import t6 from "../../../../../public/assets/t6.png";
-import t7 from "../../../../../public/assets/t7.png";
-import t8 from "../../../../../public/assets/t8.png";
-import t9 from "../../../../../public/assets/t9.png";
-import t10 from "../../../../../public/assets/t10.png";
-import t11 from "../../../../../public/assets/t11.png";
 import Link from "next/link";
 import { memo } from "react";
 import { Carousel } from "react-responsive-carousel";
 import CheckIcon from "@mui/icons-material/Check";
 import Image from "next/image";
+import { CustomCarousel } from "@/components/CustomCarousel";
+
 const projectTitles = [
   "Project Overview",
   "Project Details",
@@ -102,57 +93,57 @@ const text28 =
   "Supported both Italian and English languages for a diverse user base.";
 const carouselContent = [
   {
-    im: t1,
+    im: "/assets/t1.png",
     ex: "This is the home page, where the content dynamically changes and user can choose different groups of products that they are looking for.",
     side: "User side",
   },
   {
-    im: t2,
+    im: "/assets/t2.png",
     ex: "Products on discount shown to the user on the homepage as the user scroll down.",
     side: "User side",
   },
   {
-    im: t3,
+    im: "/assets/t3.png",
     ex: "All the pages are responsive across all devices.",
     side: "User side",
   },
   {
-    im: t4,
+    im: "/assets/t4.png",
     ex: "User can easily find the desired product after a few clicks.",
     side: "User side",
   },
   {
-    im: t5,
+    im: "/assets/t5.png",
     ex: "Here is the all products page in which there is a pagination that user can visit different pages.",
     side: "User side",
   },
   {
-    im: t6,
+    im: "/assets/t6.png",
     ex: "This is the user's cart, in which user can add, remove the peoducts and see the payment details.",
     side: "User side",
   },
   {
-    im: t7,
+    im: "/assets/t7.png",
     ex: "All product page in responsive mode.",
     side: "User side",
   },
   {
-    im: t8,
+    im: "/assets/t8.png",
     ex: "Here is where user can modify their account.",
     side: "User side",
   },
   {
-    im: t9,
+    im: "/assets/t9.png",
     ex: "Entry point of the admin panel.",
     side: "Admin side",
   },
   {
-    im: t10,
+    im: "/assets/t10.png",
     ex: "The torinasia admins can add a new product like above.",
     side: "Admin side",
   },
   {
-    im: t11,
+    im: "/assets/t11.png",
     ex: "This is where the admin can delete or edit a product, they also can search among products to find one.",
     side: "Admin side",
   },
@@ -502,81 +493,18 @@ const Torinasia = memo(({}: TorinasiaProps) => {
           {text28}
         </Typography>
 
-        <Stack id="Project Screenshots">
-          <Typography
-            sx={{ marginTop: 5, marginBottom: 4.5 }}
-            className="homeTitle"
-          >
-            Project Screenshots
-          </Typography>
-          <Stack sx={{ marginTop: 3 }}>
-            <style>{customCarouselStyles}</style>
-            <Carousel showArrows>
-              {carouselContent.map((slide, index) => {
-                return (
-                  <Box
-                    key={index}
-                    sx={{ backgroundColor: "rgb(0, 128, 128)", height: "100%" }}
-                  >
-                    <Grid container>
-                      <Grid
-                        container
-                        item
-                        xs={12}
-                        sx={{ paddingX: 3.5, paddingTop: 0.5, marginTop: 3 }}
-                      >
-                        <Image
-                          src={slide.im}
-                          alt={"vc"}
-                          layout="responsive"
-                          style={{ objectFit: "contain", maxHeight: 600 }}
-                        />
-                      </Grid>
-                      <Grid
-                        container
-                        item
-                        xs={12}
-                        sx={{
-                          marginX: 5,
-                          marginBottom: 0,
-                          justifyContent: "center",
-                        }}
-                      >
-                        <Grid item xs={12} sx={{ paddingBottom: 0 }}>
-                          <Typography
-                            sx={{ color: "white" }}
-                            className="homeBody2"
-                          >
-                            {slide.side}
-                          </Typography>
-                        </Grid>
-                        <Grid
-                          xs={12}
-                          container
-                          item
-                          sx={{
-                            minHeight: isBelowMd ? 240 : 100,
-                            justifyContent: "center",
-                            alignItems: isBelowMd ? "center" : "flex-start",
-                            marginBottom: isBelowMd ? 3 : 1,
-                          }}
-                        >
-                          <Box>
-                            <Typography style={{ color: "white" }}>
-                              {slide.ex}
-                            </Typography>
-                          </Box>
-                        </Grid>
-                      </Grid>
-                    </Grid>
-                  </Box>
-                );
-              })}
-            </Carousel>
-          </Stack>
+        <Typography
+          id="Project Screenshots"
+          sx={{ marginTop: 5 }}
+          className="homeTitle"
+        >
+          Project Screenshots
+        </Typography>
+        <Stack sx={{ marginTop: 3 }}>
+          <CustomCarousel items={carouselContent} />
         </Stack>
 
-        <Stack id="Technologies and Language" sx={{ paddingTop: 2 }}>
+        <Stack id="Technologies and Language" sx={{ paddingTop: 5 }}>
           <Typography className="homeTitle">
             Technologies and Language
           </Typography>
@@ -653,7 +581,7 @@ const Torinasia = memo(({}: TorinasiaProps) => {
             <ListItemText
               primary={
                 <>
-                  <strong>Libraries:</strong> axios ,react-responsive-carousel
+                  <strong>Libraries:</strong> axios 
                   ,nodemailer , react-router-dom...
                 </>
               }

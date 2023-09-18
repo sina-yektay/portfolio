@@ -63,7 +63,7 @@ export const Head = memo(({}: HeadProps) => {
       <Stack
         direction={"row"}
         spacing={2}
-        sx={{ display:isScrolled700 ? "none" : "flex", paddingX: "20px" }}
+        sx={{ display: isScrolled700 ? "none" : "flex", paddingX: "20px" }}
       >
         <Stack sx={{ justifyContent: "center" }}>
           <Typography
@@ -104,19 +104,19 @@ export const Head = memo(({}: HeadProps) => {
                 <Divider style={{ height: "3px" }} />
                 <ListItem
                   sx={{ cursor: "pointer" }}
-                  onClick={handleDrawerClose}
+                  onClick={() => router.push("/skills")}
                 >
                   <ListItemText primary="Skills" />
                 </ListItem>
                 <Divider style={{ height: "3px" }} />
-                <ListItem sx={{ cursor: "pointer" }}>
+                <ListItem
+                  onClick={() => router.push("/interests")}
+                  sx={{ cursor: "pointer" }}
+                >
                   <ListItemText primary="Interests" />
                 </ListItem>
                 <Divider style={{ height: "3px" }} />
-                <ListItem sx={{ cursor: "pointer" }}>
-                  <ListItemText primary="Experience" />
-                </ListItem>
-                <Divider style={{ height: "3px" }} />
+
                 <ListItem
                   sx={{ cursor: "pointer" }}
                   onClick={() => toggleDrawer(true)}
@@ -128,7 +128,7 @@ export const Head = memo(({}: HeadProps) => {
           </Stack>
         ) : (
           <>
-            <CustomDivider isScrolled700={isScrolled700}/>
+            <CustomDivider isScrolled700={isScrolled700} />
             <Stack sx={{}}>
               <Button
                 onClick={() => router.push("/projects")}
@@ -156,7 +156,7 @@ export const Head = memo(({}: HeadProps) => {
                 Contact
               </Button>
             </Stack>
-            <CustomDivider isScrolled700={isScrolled700}/>
+            <CustomDivider isScrolled700={isScrolled700} />
             <Stack sx={{}}>
               <Button
                 style={{
@@ -165,11 +165,12 @@ export const Head = memo(({}: HeadProps) => {
                   border: "outlined",
                   color: "white",
                 }}
+                onClick={() => router.push("/skills")}
               >
                 Skills
               </Button>
             </Stack>
-            <CustomDivider isScrolled700={isScrolled700}/>
+            <CustomDivider isScrolled700={isScrolled700} />
             <Stack sx={{}}>
               <Button
                 style={{
@@ -178,21 +179,9 @@ export const Head = memo(({}: HeadProps) => {
                   border: "outlined",
                   color: "white",
                 }}
+                onClick={() => router.push("/interests")}
               >
                 Interests
-              </Button>
-            </Stack>
-            <CustomDivider isScrolled700={isScrolled700}/>
-            <Stack sx={{}}>
-              <Button
-                style={{
-                  fontSize: "20px",
-                  textTransform: "none",
-                  border: "outlined",
-                  color: "white",
-                }}
-              >
-                Experience
               </Button>
             </Stack>
           </>
