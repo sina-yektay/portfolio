@@ -14,16 +14,6 @@ import {
   useTheme,
 } from "@mui/material";
 import vc from "../../../../../public/assets/vc.png";
-import hm from "../../../../../public/assets/hm.png";
-import auth from "../../../../../public/assets/auth.png";
-import ped from "../../../../../public/assets/ped.png";
-import cmp from "../../../../../public/assets/cmp.png";
-import ar from "../../../../../public/assets/ar.png";
-import fo from "../../../../../public/assets/fo.png";
-import us from "../../../../../public/assets/us.png";
-import nv from "../../../../../public/assets/nv.png";
-import rs from "../../../../../public/assets/rs.png";
-import hrs from "../../../../../public/assets/hrs.png";
 import { memo } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -31,6 +21,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import { ScrollingRocket } from "@/components/ScrollingRocket";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { CustomCarousel } from "@/components/CustomCarousel";
 const text1 =
   "Nova Coop, one of the leading retail chains operating in the Piemonte region and a prominent member of the national Coop system, operates as a cooperative consumer organization committed to delivering quality, service, and product safety to its members. Founded in 1990 through the merger of Coop Piemonte and Coop C.P.L., Nova Coop has established a significant presence across the Piemonte region and a limited area in Lombardia. The essence of Nova Coop's cooperative structure lies in its mutualistic purpose and social commitment. Profits and reserves are indivisible and reinvested to serve the interests of consumers and uphold statutory objectives.";
 const text2 =
@@ -67,52 +58,52 @@ const text17 =
   "Description: this section, provides an overview of the project's user interface by showcasing some screenshots from both the admin side and the user side. Highlight the key features, design elements, and user experience.";
 const carouselContent = [
   {
-    im: auth,
+    im: "/assets/auth.png",
     ex: "This is the entry point of the admin panel",
     side: "Admin side",
   },
   {
-    im: hm,
+    im: "/assets/hm.png",
     ex: "This is the home page of the admin side, as you see the admin can create a new page using 'AGGIUNGI PAGINA' and then set the content and style of the page using visual components introduced before. for instance as you see the Login page is already created and has 'accesso-soci' as slug, in the future slides the Login page on the user side can be found.",
     side: "Admin side",
   },
   {
-    im: ped,
+    im: "/assets/ped.png",
     ex: "Here is where we can modify or add some content to our page (after clicking on 'MODIFICA' button on last slide we get redirected here) we can add a new custom visual component to the page, also we enabled the administrators not to publish a page on the user side by clicking on 'pagina non publicata', for instance they can remove a page for some occasions and add them again only by clicking on a button.",
     side: "Admin side",
   },
   {
-    im: cmp,
+    im: "/assets/cmp.png",
     ex: "These are the visual components that i created and admin can choose them and provide them the required contents(like images, text, link or...) then user can see these contents on the UI.",
     side: "Admin side",
   },
   {
-    im: ar,
+    im: "/assets/ar.png",
     ex: "Administrators also has to create some articles that will be fetched and shown to the user on the user side.",
     side: "Admin side",
   },
   {
-    im: fo,
+    im: "/assets/fo.png",
     ex: "And this is how the admin can dynamically create footer items, there are teo dynamic column for footer that they can add some rows (which has a text and a link to the route) to it, then these values get stored on the mongodb using Node.js mongodb driver on the backend side and they get fetched during the server side rendering and shown to the user on the client side.",
     side: "Admin side",
   },
   {
-    im: us,
+    im: "/assets/us.png",
     ex: "This is the homepage if the admin doesn't add any visual component to it, just menu and footer fetched from db and shown to the user without any content.",
     side: "User side",
   },
   {
-    im: nv,
+    im: "/assets/nv.png",
     ex: "If you visit the novacoop website (as i've shown above) on (www.novacoop.it) you can see their admin provides some contents to the home page, if you also notice they dynamically added the menu items and footer.",
     side: "User side",
   },
   {
-    im: rs,
+    im: "/assets/rs.png",
     ex: "All pages are also responsive, above is the home page without any content in mobile version (the next slide is the home page with added content in mobile version).",
     side: "User side",
   },
   {
-    im: hrs,
+    im: "/assets/hrs.png",
     ex: "Home page with content in mobile version",
     side: "User side",
   },
@@ -407,69 +398,7 @@ const Novacoop = memo(({}: NovacoopProps) => {
         </Typography>
 
         <Stack sx={{ marginTop: 3 }}>
-          <style>{customCarouselStyles}</style>
-          <Carousel showArrows>
-            {carouselContent.map((slide, index) => {
-              return (
-                <Box
-                  key={index}
-                  sx={{ backgroundColor: "rgb(0, 128, 128)", height: "100%" }}
-                >
-                  <Grid container>
-                    <Grid
-                      container
-                      item
-                      xs={12}
-                      sx={{ paddingX: 3.5, paddingTop: 0.5, marginTop: 3 }}
-                    >
-                      <Image
-                        src={slide.im}
-                        alt={"vc"}
-                        layout="responsive"
-                        style={{ objectFit: "contain", maxHeight: 600 }}
-                      />
-                    </Grid>
-                    <Grid
-                      container
-                      item
-                      xs={12}
-                      sx={{
-                        marginX: 5,
-                        marginBottom: 0,
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Grid item xs={12} sx={{ paddingBottom: 0 }}>
-                        <Typography
-                          sx={{ color: "white" }}
-                          className="homeBody2"
-                        >
-                          {slide.side}
-                        </Typography>
-                      </Grid>
-                      <Grid
-                        xs={12}
-                        container
-                        item
-                        sx={{
-                          minHeight: isBelowMd ? 240 : 100,
-                          justifyContent: "center",
-                          alignItems: isBelowMd ? "center" : "flex-start",
-                          marginBottom: isBelowMd ? 3 : 1,
-                        }}
-                      >
-                        <Box>
-                          <Typography style={{ color: "white" }}>
-                            {slide.ex}
-                          </Typography>
-                        </Box>
-                      </Grid>
-                    </Grid>
-                  </Grid>
-                </Box>
-              );
-            })}
-          </Carousel>
+          <CustomCarousel items={carouselContent} />
         </Stack>
 
         <Stack id="Technologies and Language" sx={{ paddingTop: 2 }}>

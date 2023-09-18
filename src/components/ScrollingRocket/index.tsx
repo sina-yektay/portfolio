@@ -15,7 +15,7 @@ export const ScrollingRocket = memo(({ isBelowMd }: ScrollingRocketProps) => {
         border: "none",
         boxShadow: "none",
         bottom: "10%",
-        left: "2.9%",
+        left: "2%",
         display: isBelowMd
           ? "none"
           : !isBelowMd && isScrolled
