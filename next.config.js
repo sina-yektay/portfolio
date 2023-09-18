@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/portfolio',
-  assetPrefix: '/portfolio/',
-  webpack5: true,
-  distDir: 'out',
-}
+  basePath: "/portfolio",
+  assetPrefix: "/portfolio/",
+  output: {
+    dir: "out",
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
