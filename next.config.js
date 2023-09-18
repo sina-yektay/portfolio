@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/resume',
-  assetPrefix: '/resume/',
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio/',
   webpack5: true,
   distDir: 'out',
 }
