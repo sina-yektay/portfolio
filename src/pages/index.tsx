@@ -266,22 +266,22 @@ export default function Home() {
             </List>
           </Stack>
           <Stack sx={{ paddingTop: 2 }}>
-            <Typography sx={{ fontSize: "30px", fontFamily: "sans-serif" }}>
+            <Typography sx={{ fontSize: "17px", fontFamily: "sans-serif" }}>
               {text3}
             </Typography>
           </Stack>
           <Stack sx={{ paddingTop: 2 }}>
-            <Typography sx={{ fontSize: "30px", fontFamily: "sans-serif" }}>
+            <Typography sx={{ fontSize: "17px", fontFamily: "sans-serif" }}>
               {text4}
             </Typography>
           </Stack>
           <Stack sx={{ paddingTop: 2 }}>
-            <Typography sx={{ fontSize: "30px", fontFamily: "sans-serif" }}>
+            <Typography sx={{ fontSize: "17px", fontFamily: "sans-serif" }}>
               {text5}
             </Typography>
           </Stack>
           <Stack sx={{ paddingTop: 2 }}>
-            <Typography sx={{ fontSize: "30px", fontFamily: "sans-serif" }}>
+            <Typography sx={{ fontSize: "17px", fontFamily: "sans-serif" }}>
               {text6}
             </Typography>
           </Stack>
