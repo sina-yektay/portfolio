@@ -66,7 +66,7 @@ export const Head = memo(({}: HeadProps) => {
         sx={{ display: isScrolled700 ? "none" : "flex", paddingX: "20px" }}
       >
         <Stack
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/portfolio")}
           sx={{ justifyContent: "center" }}
         >
           <Typography
