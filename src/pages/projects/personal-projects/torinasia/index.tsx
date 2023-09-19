@@ -86,7 +86,7 @@ const text24 =
   "Utilized modern web technologies, including React for the frontend development, and Redux for state management.";
 const text25 = "Employed Node.js for the server-side logic and data handling.";
 const text26 =
-  " Leveraged a database system (e.g., MongoDB or PostgreSQL) for storing product and user data.";
+  " Leveraged a database system (MongoDB) for storing product and user data.";
 const text27 =
   "Integrated Nodemailer to facilitate email notifications and password reset functionality.";
 const text28 =
@@ -168,31 +168,46 @@ const Torinasia = memo(({}: TorinasiaProps) => {
           borderRight: "5px solid rgb(0, 128, 128)",
         }}
       >
-        <Typography sx={{ paddingBottom: 3, fontSize:"30px", fontWeight: "bold", fontFamily:"sans-serif" }}>
+        <Typography
+          sx={{
+            paddingBottom: 3,
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "sans-serif",
+          }}
+        >
           Torinasia
         </Typography>
-
-
 
         <DetailTab tabs={projectTitles} />
 
         <Typography
           id="Project Overview"
-          sx={{ paddingTop: isBelowMd ? 5 : 12, fontSize:"30px", fontWeight: "bold", fontFamily:"sans-serif" }}
-          
+          sx={{
+            paddingTop: isBelowMd ? 5 : 12,
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "sans-serif",
+          }}
         >
           Project Overview
         </Typography>
 
-        <Typography sx={{ paddingTop: 3, fontSize:"21px",  fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 3, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           {" "}
           TorinAsia - Online Asian Food Marketplace
         </Typography>
-        <Typography sx={{ paddingTop: 1,fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text1}
         </Typography>
 
-        <Typography sx={{ paddingTop: 3, fontSize:"21px", fontFamily:"sans-serif" }}>
+        <Typography
+          sx={{ paddingTop: 3, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           Business Objectives:
         </Typography>
 
@@ -259,78 +274,120 @@ const Torinasia = memo(({}: TorinasiaProps) => {
           </ListItem>
         </List>
 
-        <Typography sx={{ paddingTop: 3, fontSize:"21px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 3, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           Key Features:
         </Typography>
 
-        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }}>
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>1. User Account Creation</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text6}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }}>
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>2. Product Catalog</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }}>
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text7}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>3. Easy and Fast Payment</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }}>
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text8}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>4. Fast Delivery</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1,  fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text9}
         </Typography>
-        <Typography sx={{ paddingTop: 2,  fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>5. Purchase History</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text10}
         </Typography>
-        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>6. Personalized Discounts</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1,  fontSize:"17px", fontFamily:"sans-serif" }}>
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text11}
         </Typography>
-        <Typography sx={{ paddingTop: 3, fontSize:"21px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 3, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           Target Audience:
         </Typography>
         <Typography sx={{ paddingTop: 0.5 }} className="homeBody">
           {text12}
         </Typography>
-        <Typography sx={{ paddingTop: 3, fontSize:"21px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 3, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           Impact and Future Plans:
         </Typography>
-        <Typography sx={{ paddingTop: 0.5, fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 0.5, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text13}
         </Typography>
 
         <Typography
           id="Project Details"
-          sx={{ paddingTop: 4, fontSize:"30px",fontWeight:"bold", fontFamily:"sans-serif" }}
-          
+          sx={{
+            paddingTop: 4,
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "sans-serif",
+          }}
         >
           Project Details
         </Typography>
 
-        <Typography sx={{ paddingTop: 5,  fontSize:"21px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 5, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           Project Details: TorinAsia - Online Asian Food Marketplace
         </Typography>
-        <Typography sx={{ marginTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ marginTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text14}
         </Typography>
 
-        <Typography sx={{ paddingTop: 4, fontSize:"21px", fontFamily:"sans-serif" }}>
+        <Typography
+          sx={{ paddingTop: 4, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           Admin SPA Features:
         </Typography>
 
@@ -378,7 +435,9 @@ const Torinasia = memo(({}: TorinasiaProps) => {
             />
           </ListItem>
         </List>
-        <Typography sx={{ paddingTop: 4, fontSize:"21px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 4, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           User SPA Features:
         </Typography>
 
@@ -469,36 +528,53 @@ const Torinasia = memo(({}: TorinasiaProps) => {
           </ListItem>
         </List>
 
-        <Typography sx={{ marginTop: 2, fontSize:"21px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ marginTop: 2, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           Technology Stack:
         </Typography>
 
-        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>Frontend: </strong>
           {text24}
         </Typography>
-        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>Backend: </strong>
           {text25}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }}>
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>Database: </strong>
           {text26}
         </Typography>
-        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>Email Notifications: </strong>
           {text27}
         </Typography>
-        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>Languages: </strong>
           {text28}
         </Typography>
 
         <Typography
           id="Project Screenshots"
-          sx={{ marginTop: 5, marginBottom: 5, fontSize:"30px",fontWeight:"bold", fontFamily:"sans-serif" }}
-          
+          sx={{
+            marginTop: 5,
+            marginBottom: 5,
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "sans-serif",
+          }}
         >
           Project Screenshots
         </Typography>
@@ -507,7 +583,13 @@ const Torinasia = memo(({}: TorinasiaProps) => {
         </Stack>
 
         <Stack id="Technologies and Language" sx={{ paddingTop: 5 }}>
-          <Typography sx={{fontSize:"30px",fontWeight:"bold",fontFamily:"sans-serif"}}>
+          <Typography
+            sx={{
+              fontSize: "30px",
+              fontWeight: "bold",
+              fontFamily: "sans-serif",
+            }}
+          >
             Technologies and Language
           </Typography>
         </Stack>
@@ -688,7 +770,13 @@ const Torinasia = memo(({}: TorinasiaProps) => {
         </List>
 
         <Stack id="Links" sx={{ paddingTop: 5, marginBottom: 1 }}>
-          <Typography sx={{fontSize:"30px",fontWeight:"bold",fontFamily:"sans-serif"}}>
+          <Typography
+            sx={{
+              fontSize: "30px",
+              fontWeight: "bold",
+              fontFamily: "sans-serif",
+            }}
+          >
             here is the website link and github repo
           </Typography>
         </Stack>
