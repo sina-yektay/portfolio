@@ -65,28 +65,24 @@ export const Head = memo(({}: HeadProps) => {
         spacing={2}
         sx={{ display: isScrolled700 ? "none" : "flex", paddingX: "20px" }}
       >
-        <Stack
-          onClick={() => router.push("/portfolio")}
-          sx={{ justifyContent: "center" }}
-        >
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: "flex",
-              fontFamily: "monospace",
-              fontWeight: 701,
-              letterSpacing: "6px",
-              color: "inherit",
+        <Button
+          onClick={() => router.push("/")}
+          sx={{
+            justifyContent: "center",
+            fontFamily: "monospace",
+            fontWeight: 700,
+            fontSize: "21px",
+            letterSpacing: "6px",
+            color: "inherit",
+            textDecoration: "none",
+            textTransform: "none",
+            "&:hover": {
               textDecoration: "none",
-            }}
-          >
-            SINA YEKTAY
-          </Typography>
-        </Stack>
+            },
+          }}
+        >
+          SINA YEKTAY
+        </Button>
         {isBelowMd ? (
           <Stack style={{ marginLeft: "auto" }}>
             <IconButton onClick={handleMenuClick}>
