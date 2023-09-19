@@ -33,7 +33,15 @@ const Skills = memo(({}: SkillsProps) => {
           sx={{ alignItems: "center" }}
         >
           <Box sx={{ width: isBelowMd ? "100%" : "60%" }}>
-            <Typography className="homeTitle">Skills</Typography>
+            <Typography
+              sx={{
+                fontSize: "30px",
+                fontWeight: "bold",
+                fontFamily: "sans-serif",
+              }}
+            >
+              Skills
+            </Typography>
             <Divider />
             <Box sx={{ borderTop: "5px rgb(0, 128, 128) solid" }}>
               <List>
@@ -202,7 +210,15 @@ const Skills = memo(({}: SkillsProps) => {
           sx={{ alignItems: "center", marginTop: isBelowMd ? 8 : 0 }}
         >
           <Box sx={{ width: isBelowMd ? "100%" : "60%" }}>
-            <Typography className="homeTitle">Scholastic skills</Typography>
+            <Typography
+              sx={{
+                fontSize: "30px",
+                fontWeight: "bold",
+                fontFamily: "sans-serif",
+              }}
+            >
+              Scholastic skills
+            </Typography>
             <Divider />
             <Box sx={{ borderTop: "5px rgb(0, 128, 128) solid" }}>
               <List>

@@ -19,72 +19,6 @@ import { memo } from "react";
 import { Carousel } from "react-responsive-carousel";
 import CheckIcon from "@mui/icons-material/Check";
 import { CustomCarousel } from "@/components/CustomCarousel";
-const carouselContent = [
-  {
-    im: "/assets/e1.png",
-    ex: "This is the home page of the Excelsiorienta, here the user chooses the student's path or the parent's path, then in next step this is used as a query tom fetch appropriate articles according to the user type.",
-    side: "User side",
-  },
-  {
-    im: "/assets/e2.png",
-    ex: "Here you can see different news articles according to the user type(chosen in home page), but this is the local development and the news articles are not real, in the next slide you can see the same page with the appropriate articles on production.",
-    side: "User side",
-  },
-  {
-    im: "/assets/e3.png",
-    ex: "Here the articles are retrieved from db on the server side.",
-    side: "User side",
-  },
-  {
-    im: "/assets/e4.png",
-    ex: "This is the same page as the last slide but in mobile version, all pages are responsive in this platform.",
-    side: "User side",
-  },
-  {
-    im: "/assets/e5.png",
-    ex: "This is the career page, where the students can choose a pathe to see it's details.",
-    side: "User side",
-  },
-  {
-    im: "/assets/e6.png",
-    ex: "As instance this is the details page for Physicists and Astronomers.",
-    side: "User side",
-  },
-  {
-    im: "/assets/e7.png",
-    ex: "Physicists and Astronomers job details and statistics.",
-    side: "User side",
-  },
-  {
-    im: "/assets/e8.png",
-    ex: "Entry point of the Orienta Game(SPA).",
-    side: "User side",
-  },
-  {
-    im: "/assets/e9.png",
-    ex: "Here the user enter their details to proceed.",
-    side: "User side",
-  },
-  {
-    im: "/assets/e10.png",
-    ex: "User has to choose an avatar and the interested subjects.",
-    side: "User side",
-  },
-  {
-    im: "/assets/e11.png",
-    ex: "And finally here is the start of the game, the user has to finish three steps to receive a personalized suggestion for their career path.",
-    side: "User side",
-  },
-];
-
-const customCarouselStyles = `
-  .carousel .control-arrow:hover {
-    background: none !important;
-    color: inherit !important;
-    opacity: 1 !important;
-    cursor: pointer !important;
-  }
-`;
 
 const text1 =
   "As a frontend developer, I had the privilege of working on the Excelsiorienta project, a cutting-edge platform conceived by Unioncamere to empower students in navigating the complexities of the job market. This digital bridge leverages the rich data and experience of the Excelsior Information System to establish a seamless connection between the world of education and the world of work.";
@@ -151,7 +85,14 @@ const Excelsiorienta = memo(({}: ExcelsiorientaProps) => {
           borderRight: "5px solid rgb(0, 128, 128)",
         }}
       >
-        <Typography sx={{ paddingBottom: 3 }} className="homeTitle">
+        <Typography
+          sx={{
+            paddingBottom: 3,
+            fontSize: "30px",
+            fontFamily: "sans-serif",
+            fontWeight: "bold",
+          }}
+        >
           Excelsiorienta
         </Typography>
 
@@ -159,24 +100,36 @@ const Excelsiorienta = memo(({}: ExcelsiorientaProps) => {
 
         <Typography
           id="Project Overview"
-          sx={{ paddingTop: isBelowMd ? 5 : 12 }}
-          className="homeTitle"
+          sx={{
+            paddingTop: isBelowMd ? 5 : 12,
+            fontSize: "30px",
+            fontFamily: "sans-serif",
+            fontWeight: "bold",
+          }}
         >
           Project Overview
         </Typography>
 
-        <Typography sx={{ paddingTop: 3 }} className="homeBody2">
+        <Typography
+          sx={{ paddingTop: 3, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           {" "}
           Excelsiorienta - Bridging Education and Career Exploration
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text1}
         </Typography>
 
-        <Typography sx={{ paddingTop: 3 }} className="homeBody2">
+        <Typography
+          sx={{ paddingTop: 3, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           Target Audience:
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           The Excelsiorienta portal serves two primary user groups:
         </Typography>
 
@@ -211,81 +164,121 @@ const Excelsiorienta = memo(({}: ExcelsiorientaProps) => {
           </ListItem>
         </List>
 
-        <Typography sx={{ paddingTop: 3 }} className="homeBody2">
+        <Typography
+          sx={{ paddingTop: 3, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           Key Features:
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>1. OrientaGame: Charting Your Course</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text4}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>2. Career Guidance: Navigating the Landscape</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text5}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>
             3. Entrepreneurship Guidance: Paving the Way to Self-Employment
           </strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text6}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>4. Staying Informed: Current Job Market Dynamics</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text7}
         </Typography>
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text8}
         </Typography>
 
         <Typography
           id="Project Details"
-          sx={{ paddingTop: 4 }}
-          className="homeTitle"
+          sx={{
+            paddingTop: 4,
+            fontSize: "30px",
+            fontFamily: "sans-serif",
+            fontWeight: "bold",
+          }}
         >
           Project Details
         </Typography>
 
-        <Typography sx={{ paddingTop: 5 }} className="homeBody2">
+        <Typography
+          sx={{ paddingTop: 5, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           My Role:
         </Typography>
-        <Typography sx={{ marginTop: 1 }} className="homeBody">
+        <Typography
+          sx={{ marginTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text9}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>
             1. Frontend Development with React, Redux, and Next.js:{" "}
           </strong>
           {text10}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           <strong>2. Backend API Handling: </strong>
           {text11}
         </Typography>
 
-        <Typography sx={{ paddingTop: 4 }} className="homeBody2">
+        <Typography
+          sx={{ paddingTop: 4, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           Orienta Game: Enhancing User Experience
         </Typography>
 
-        <Typography sx={{ marginTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ marginTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text12}
         </Typography>
-        <Typography sx={{ marginTop: 3 }} className="homeBody2">
+        <Typography
+          sx={{ marginTop: 3, fontSize: "21px", fontFamily: "sans-serif" }}
+        >
           Game Overview:
         </Typography>
-        <Typography sx={{ marginTop: 1 }} className="homeBody">
+        <Typography
+          sx={{ marginTop: 1, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text13}
         </Typography>
 
@@ -333,28 +326,38 @@ const Excelsiorienta = memo(({}: ExcelsiorientaProps) => {
             />
           </ListItem>
         </List>
-        <Typography className="homeBody">
+        <Typography sx={{ fontSize: "17px", fontFamily: "sans-serif" }}>
           <strong>User Experience: </strong>
           {text17}
         </Typography>
 
         <Typography
           id="Project Screenshots"
-          sx={{ marginTop: 5 }}
-          className="homeTitle"
+          sx={{
+            marginTop: 5,
+            fontSize: "30px",
+            fontFamily: "sans-serif",
+            fontWeight: "bold",
+          }}
         >
           Project Screenshots
         </Typography>
 
-        <Stack sx={{ marginTop: 7, }}>
-          <CustomCarousel items={carouselContent} />
+        <Stack sx={{ marginTop: 7 }}>
+          <CustomCarousel project={"excelsiorienta"} />
         </Stack>
 
         <Stack
           id="Technologies and Language"
           sx={{ paddingTop: 2, marginTop: 5 }}
         >
-          <Typography className="homeTitle">
+          <Typography
+            sx={{
+              fontWeight: "bold",
+              fontSize: "30px",
+              fontFamily: "sans-serif",
+            }}
+          >
             Technologies and Language
           </Typography>
         </Stack>
@@ -535,7 +538,13 @@ const Excelsiorienta = memo(({}: ExcelsiorientaProps) => {
         </List>
 
         <Stack id="Links" sx={{ paddingTop: 5, marginBottom: 1 }}>
-          <Typography className="homeTitle">
+          <Typography
+            sx={{
+              fontWeight: "bold",
+              fontSize: "30px",
+              fontFamily: "sans-serif",
+            }}
+          >
             here is the website link
           </Typography>
         </Stack>
