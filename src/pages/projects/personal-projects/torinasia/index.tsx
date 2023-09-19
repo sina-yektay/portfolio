@@ -785,7 +785,7 @@ const Torinasia = memo(({}: TorinasiaProps) => {
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            href="https://torinasia.com"
+            href="https://www.torinasia.com"
           >
             <Typography style={{ fontSize: "25px" }}>
               www.torinasia.com
