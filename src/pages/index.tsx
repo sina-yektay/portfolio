@@ -49,19 +49,35 @@ export default function Home() {
         >
           <Stack sx={{}}>
             <Stack sx={{ paddingBottom: 3 }}>
-              <Typography className="homeTitle">
+              <Typography
+                sx={{
+                  fontSize: "30px",
+                  fontWeight: "bold",
+                  fontFamily: "sans-serif",
+                }}
+              >
                 Welcome to My Portfolio
               </Typography>
             </Stack>
           </Stack>
           <Stack>
-            <Typography className="homeBody">{text1}</Typography>
+            <Typography sx={{ fontSize: "17px", fontFamily: "sans-serif" }}>
+              {text1}
+            </Typography>
           </Stack>
           <Stack sx={{ marginTop: 2 }}>
-            <Typography className="homeBody">{text2}</Typography>
+            <Typography sx={{ fontSize: "17px", fontFamily: "sans-serif" }}>
+              {text2}
+            </Typography>
           </Stack>
           <Stack sx={{ paddingTop: 5 }}>
-            <Typography className="homeTitle">
+            <Typography
+              sx={{
+                fontSize: "30px",
+                fontWeight: "bold",
+                fontFamily: "sans-serif",
+              }}
+            >
               What I Bring to the Table
             </Typography>
           </Stack>
@@ -250,16 +266,24 @@ export default function Home() {
             </List>
           </Stack>
           <Stack sx={{ paddingTop: 2 }}>
-            <Typography className="homeBody">{text3}</Typography>
+            <Typography sx={{ fontSize: "30px", fontFamily: "sans-serif" }}>
+              {text3}
+            </Typography>
           </Stack>
           <Stack sx={{ paddingTop: 2 }}>
-            <Typography className="homeBody">{text4}</Typography>
+            <Typography sx={{ fontSize: "30px", fontFamily: "sans-serif" }}>
+              {text4}
+            </Typography>
           </Stack>
           <Stack sx={{ paddingTop: 2 }}>
-            <Typography className="homeBody">{text5}</Typography>
+            <Typography sx={{ fontSize: "30px", fontFamily: "sans-serif" }}>
+              {text5}
+            </Typography>
           </Stack>
           <Stack sx={{ paddingTop: 2 }}>
-            <Typography className="homeBody">{text6}</Typography>
+            <Typography sx={{ fontSize: "30px", fontFamily: "sans-serif" }}>
+              {text6}
+            </Typography>
           </Stack>
         </Stack>
       </PageWrapper>

@@ -65,7 +65,10 @@ export const Head = memo(({}: HeadProps) => {
         spacing={2}
         sx={{ display: isScrolled700 ? "none" : "flex", paddingX: "20px" }}
       >
-        <Stack sx={{ justifyContent: "center" }}>
+        <Stack
+          onClick={() => router.push("/")}
+          sx={{ justifyContent: "center" }}
+        >
           <Typography
             variant="h6"
             noWrap
