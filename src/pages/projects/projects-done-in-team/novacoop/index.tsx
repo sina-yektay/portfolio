@@ -58,52 +58,52 @@ const text17 =
   "Description: this section, provides an overview of the project's user interface by showcasing some screenshots from both the admin side and the user side. Highlight the key features, design elements, and user experience.";
 const carouselContent = [
   {
-    im: "/assets/auth.png",
+    im: "auth",
     ex: "This is the entry point of the admin panel",
     side: "Admin side",
   },
   {
-    im: "/assets/hm.png",
+    im: "hm",
     ex: "This is the home page of the admin side, as you see the admin can create a new page using 'AGGIUNGI PAGINA' and then set the content and style of the page using visual components introduced before. for instance as you see the Login page is already created and has 'accesso-soci' as slug, in the future slides the Login page on the user side can be found.",
     side: "Admin side",
   },
   {
-    im: "/assets/ped.png",
+    im: "ped",
     ex: "Here is where we can modify or add some content to our page (after clicking on 'MODIFICA' button on last slide we get redirected here) we can add a new custom visual component to the page, also we enabled the administrators not to publish a page on the user side by clicking on 'pagina non publicata', for instance they can remove a page for some occasions and add them again only by clicking on a button.",
     side: "Admin side",
   },
   {
-    im: "/assets/cmp.png",
+    im: "cmp",
     ex: "These are the visual components that i created and admin can choose them and provide them the required contents(like images, text, link or...) then user can see these contents on the UI.",
     side: "Admin side",
   },
   {
-    im: "/assets/ar.png",
+    im: "ar",
     ex: "Administrators also has to create some articles that will be fetched and shown to the user on the user side.",
     side: "Admin side",
   },
   {
-    im: "/assets/fo.png",
+    im: "fo",
     ex: "And this is how the admin can dynamically create footer items, there are teo dynamic column for footer that they can add some rows (which has a text and a link to the route) to it, then these values get stored on the mongodb using Node.js mongodb driver on the backend side and they get fetched during the server side rendering and shown to the user on the client side.",
     side: "Admin side",
   },
   {
-    im: "/assets/us.png",
+    im: "us",
     ex: "This is the homepage if the admin doesn't add any visual component to it, just menu and footer fetched from db and shown to the user without any content.",
     side: "User side",
   },
   {
-    im: "/assets/nv.png",
+    im: "nv",
     ex: "If you visit the novacoop website (as i've shown above) on (www.novacoop.it) you can see their admin provides some contents to the home page, if you also notice they dynamically added the menu items and footer.",
     side: "User side",
   },
   {
-    im: "/assets/rs.png",
+    im: "rs",
     ex: "All pages are also responsive, above is the home page without any content in mobile version (the next slide is the home page with added content in mobile version).",
     side: "User side",
   },
   {
-    im: "/assets/hrs.png",
+    im: "hrs",
     ex: "Home page with content in mobile version",
     side: "User side",
   },
@@ -143,7 +143,14 @@ const Novacoop = memo(({}: NovacoopProps) => {
           borderRight: "5px solid rgb(0, 128, 128)",
         }}
       >
-        <Typography sx={{ paddingBottom: 3 }} className="homeTitle">
+        <Typography
+          sx={{
+            paddingBottom: 3,
+            fontSize: "30px",
+            fontFamily: "sans-serif",
+            fontWeight: "bold",
+          }}
+        >
           Novacoop
         </Typography>
 
@@ -151,17 +158,25 @@ const Novacoop = memo(({}: NovacoopProps) => {
 
         <Typography
           id="Project Overview"
-          sx={{ paddingTop: isBelowMd ? 5 : 12 }}
-          className="homeTitle"
+          sx={{
+            paddingTop: isBelowMd ? 5 : 12,
+            fontSize: "30px",
+            fontFamily: "sans-serif",
+            fontWeight: "bold",
+          }}
         >
           Project Overview
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text1}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text2}
         </Typography>
 
@@ -242,39 +257,47 @@ const Novacoop = memo(({}: NovacoopProps) => {
           </ListItem>
         </List>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text8}
         </Typography>
 
         <Typography
           id="Project Details"
-          sx={{ paddingTop: isBelowMd ? 5 : 12 }}
-          className="homeTitle"
+          sx={{
+            paddingTop: isBelowMd ? 5 : 12,
+            fontSize: "30px",
+            fontFamily: "sans-serif",
+            fontWeight: "bold",
+          }}
         >
           Project Details
         </Typography>
 
         <Typography
           id="Project Details"
-          sx={{ paddingTop: 2 }}
-          className="homeBody2"
+          sx={{ paddingTop: 2, fontSize: "21px", fontFamily: "sans-serif" }}
         >
           Project Objectives:
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text9}
         </Typography>
 
         <Typography
           id="Project Details"
-          sx={{ paddingTop: 3 }}
-          className="homeBody2"
+          sx={{ paddingTop: 3, fontSize: "21px", fontFamily: "sans-serif" }}
         >
           Empowering Administrators:
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text10}
         </Typography>
 
@@ -377,32 +400,43 @@ const Novacoop = memo(({}: NovacoopProps) => {
           </Grid>
         </Grid>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography
+          sx={{ paddingTop: 2, fontSize: "17px", fontFamily: "sans-serif" }}
+        >
           {text16}
         </Typography>
 
         <Typography
           id="Project Screenshots"
-          sx={{ marginTop: 4 }}
-          className="homeTitle"
+          sx={{
+            marginTop: 4,
+            fontSize: "30px",
+            fontFamily: "sans-serif",
+            fontWeight: "bold",
+          }}
         >
           Project Screenshots
         </Typography>
 
         <Typography
           id="Project Screenshots"
-          sx={{ marginTop: 4 }}
-          className="homebody"
+          sx={{ marginTop: 4, fontSize: "17px", fontFamily: "sans-serif" }}
         >
           {text17}
         </Typography>
 
         <Stack sx={{ marginTop: 3 }}>
-          <CustomCarousel items={carouselContent} />
+          <CustomCarousel project={"novacoop"} />
         </Stack>
 
         <Stack id="Technologies and Language" sx={{ paddingTop: 2 }}>
-          <Typography className="homeTitle">
+          <Typography
+            sx={{
+              fontSize: "30px",
+              fontFamily: "sans-serif",
+              fontWeight: "bold",
+            }}
+          >
             Technologies and Language
           </Typography>
         </Stack>
@@ -584,8 +618,13 @@ const Novacoop = memo(({}: NovacoopProps) => {
 
         <Typography
           id="Links"
-          sx={{ paddingTop: 5, marginBottom: 1 }}
-          className="homeTitle"
+          sx={{
+            paddingTop: 5,
+            marginBottom: 1,
+            fontSize: "30px",
+            fontFamily: "sans-serif",
+            fontWeight: "bold",
+          }}
         >
           here is the website link
         </Typography>

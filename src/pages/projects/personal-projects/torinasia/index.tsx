@@ -168,29 +168,31 @@ const Torinasia = memo(({}: TorinasiaProps) => {
           borderRight: "5px solid rgb(0, 128, 128)",
         }}
       >
-        <Typography sx={{ paddingBottom: 3 }} className="homeTitle">
+        <Typography sx={{ paddingBottom: 3, fontSize:"30px", fontWeight: "bold", fontFamily:"sans-serif" }}>
           Torinasia
         </Typography>
+
+
 
         <DetailTab tabs={projectTitles} />
 
         <Typography
           id="Project Overview"
-          sx={{ paddingTop: isBelowMd ? 5 : 12 }}
-          className="homeTitle"
+          sx={{ paddingTop: isBelowMd ? 5 : 12, fontSize:"30px", fontWeight: "bold", fontFamily:"sans-serif" }}
+          
         >
           Project Overview
         </Typography>
 
-        <Typography sx={{ paddingTop: 3 }} className="homeBody2">
+        <Typography sx={{ paddingTop: 3, fontSize:"21px",  fontFamily:"sans-serif" }} >
           {" "}
           TorinAsia - Online Asian Food Marketplace
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography sx={{ paddingTop: 1,fontSize:"17px", fontFamily:"sans-serif" }} >
           {text1}
         </Typography>
 
-        <Typography sx={{ paddingTop: 3 }} className="homeBody2">
+        <Typography sx={{ paddingTop: 3, fontSize:"21px", fontFamily:"sans-serif" }}>
           Business Objectives:
         </Typography>
 
@@ -257,78 +259,78 @@ const Torinasia = memo(({}: TorinasiaProps) => {
           </ListItem>
         </List>
 
-        <Typography sx={{ paddingTop: 3 }} className="homeBody2">
+        <Typography sx={{ paddingTop: 3, fontSize:"21px", fontFamily:"sans-serif" }} >
           Key Features:
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }}>
           <strong>1. User Account Creation</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
           {text6}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }}>
           <strong>2. Product Catalog</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }}>
           {text7}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }} >
           <strong>3. Easy and Fast Payment</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }}>
           {text8}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }} >
           <strong>4. Fast Delivery</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography sx={{ paddingTop: 1,  fontSize:"17px", fontFamily:"sans-serif" }} >
           {text9}
         </Typography>
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography sx={{ paddingTop: 2,  fontSize:"17px", fontFamily:"sans-serif" }} >
           <strong>5. Purchase History</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
           {text10}
         </Typography>
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }} >
           <strong>6. Personalized Discounts</strong>
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography sx={{ paddingTop: 1,  fontSize:"17px", fontFamily:"sans-serif" }}>
           {text11}
         </Typography>
-        <Typography sx={{ paddingTop: 3 }} className="homeBody2">
+        <Typography sx={{ paddingTop: 3, fontSize:"21px", fontFamily:"sans-serif" }} >
           Target Audience:
         </Typography>
         <Typography sx={{ paddingTop: 0.5 }} className="homeBody">
           {text12}
         </Typography>
-        <Typography sx={{ paddingTop: 3 }} className="homeBody2">
+        <Typography sx={{ paddingTop: 3, fontSize:"21px", fontFamily:"sans-serif" }} >
           Impact and Future Plans:
         </Typography>
-        <Typography sx={{ paddingTop: 0.5 }} className="homeBody">
+        <Typography sx={{ paddingTop: 0.5, fontSize:"17px", fontFamily:"sans-serif" }} >
           {text13}
         </Typography>
 
         <Typography
           id="Project Details"
-          sx={{ paddingTop: 4 }}
-          className="homeTitle"
+          sx={{ paddingTop: 4, fontSize:"30px",fontWeight:"bold", fontFamily:"sans-serif" }}
+          
         >
           Project Details
         </Typography>
 
-        <Typography sx={{ paddingTop: 5 }} className="homeBody2">
+        <Typography sx={{ paddingTop: 5,  fontSize:"21px", fontFamily:"sans-serif" }} >
           Project Details: TorinAsia - Online Asian Food Marketplace
         </Typography>
-        <Typography sx={{ marginTop: 1 }} className="homeBody">
+        <Typography sx={{ marginTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
           {text14}
         </Typography>
 
-        <Typography sx={{ paddingTop: 4 }} className="homeBody2">
+        <Typography sx={{ paddingTop: 4, fontSize:"21px", fontFamily:"sans-serif" }}>
           Admin SPA Features:
         </Typography>
 
@@ -376,7 +378,7 @@ const Torinasia = memo(({}: TorinasiaProps) => {
             />
           </ListItem>
         </List>
-        <Typography sx={{ paddingTop: 4 }} className="homeBody2">
+        <Typography sx={{ paddingTop: 4, fontSize:"21px", fontFamily:"sans-serif" }} >
           User SPA Features:
         </Typography>
 
@@ -467,45 +469,45 @@ const Torinasia = memo(({}: TorinasiaProps) => {
           </ListItem>
         </List>
 
-        <Typography sx={{ marginTop: 2 }} className="homeBody2">
+        <Typography sx={{ marginTop: 2, fontSize:"21px", fontFamily:"sans-serif" }} >
           Technology Stack:
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }} >
           <strong>Frontend: </strong>
           {text24}
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
           <strong>Backend: </strong>
           {text25}
         </Typography>
 
-        <Typography sx={{ paddingTop: 2 }} className="homeBody">
+        <Typography sx={{ paddingTop: 2, fontSize:"17px", fontFamily:"sans-serif" }}>
           <strong>Database: </strong>
           {text26}
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
           <strong>Email Notifications: </strong>
           {text27}
         </Typography>
-        <Typography sx={{ paddingTop: 1 }} className="homeBody">
+        <Typography sx={{ paddingTop: 1, fontSize:"17px", fontFamily:"sans-serif" }} >
           <strong>Languages: </strong>
           {text28}
         </Typography>
 
         <Typography
           id="Project Screenshots"
-          sx={{ marginTop: 5 }}
-          className="homeTitle"
+          sx={{ marginTop: 5, marginBottom: 5, fontSize:"30px",fontWeight:"bold", fontFamily:"sans-serif" }}
+          
         >
           Project Screenshots
         </Typography>
         <Stack sx={{ marginTop: 3 }}>
-          <CustomCarousel items={carouselContent} />
+          <CustomCarousel project={"torinasia"} />
         </Stack>
 
         <Stack id="Technologies and Language" sx={{ paddingTop: 5 }}>
-          <Typography className="homeTitle">
+          <Typography sx={{fontSize:"30px",fontWeight:"bold",fontFamily:"sans-serif"}}>
             Technologies and Language
           </Typography>
         </Stack>
@@ -581,8 +583,8 @@ const Torinasia = memo(({}: TorinasiaProps) => {
             <ListItemText
               primary={
                 <>
-                  <strong>Libraries:</strong> axios 
-                  ,nodemailer , react-router-dom...
+                  <strong>Libraries:</strong> axios ,nodemailer ,
+                  react-router-dom...
                 </>
               }
             />
@@ -686,7 +688,7 @@ const Torinasia = memo(({}: TorinasiaProps) => {
         </List>
 
         <Stack id="Links" sx={{ paddingTop: 5, marginBottom: 1 }}>
-          <Typography className="homeTitle">
+          <Typography sx={{fontSize:"30px",fontWeight:"bold",fontFamily:"sans-serif"}}>
             here is the website link and github repo
           </Typography>
         </Stack>
