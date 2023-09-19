@@ -56,7 +56,7 @@ export default function Home() {
                   fontFamily: "sans-serif",
                 }}
               >
-                Welcome to My Portfolio
+                Welcome to My Portfolio2
               </Typography>
             </Stack>
           </Stack>
