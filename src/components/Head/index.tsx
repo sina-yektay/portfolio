@@ -78,7 +78,7 @@ export const Head = memo(({}: HeadProps) => {
               mr: 2,
               display: "flex",
               fontFamily: "monospace",
-              fontWeight: 700,
+              fontWeight: 701,
               letterSpacing: "6px",
               color: "inherit",
               textDecoration: "none",
