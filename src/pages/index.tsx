@@ -121,7 +121,7 @@ export default function Home() {
                 <ListItemText
                   primary={
                     <>
-                      <strong>Frameworks:</strong> Next.js
+                      <strong>Frontend:</strong> React, Redux-Saga, Mui, Html, Css, Next.js
                     </>
                   }
                 />
